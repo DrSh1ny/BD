@@ -49,7 +49,7 @@ def hello():
 
 @app.route("/departments/", methods=['GET'], strict_slashes=True)
 def get_all_departments():
-    logger.info("###              DEMO: GET /departments              ###")
+    logger.info("###              DEMO: GET /departments              ###");   
 
     conn = db_connection()
     cur = conn.cursor()
@@ -81,7 +81,7 @@ def get_all_departments():
 
 @app.route("/departments/<ndep>", methods=['GET'])
 def get_department(ndep):
-    logger.info("###              DEMO: GET /departments/<ndep>              ###")  
+    logger.info("###              DEMO: GET /departments/<ndep>              ###");   
 
     logger.debug(f'ndep: {ndep}')
 
@@ -115,7 +115,7 @@ def get_department(ndep):
 
 @app.route("/departments/", methods=['POST'])
 def add_departments():
-    logger.info("###              DEMO: POST /departments              ###")
+    logger.info("###              DEMO: POST /departments              ###");   
     payload = request.get_json()
 
     conn = db_connection()
@@ -159,7 +159,7 @@ def add_departments():
 
 @app.route("/departments/", methods=['PUT'])
 def update_departments():
-    logger.info("###              DEMO: PUT /departments              ###")
+    logger.info("###              DEMO: PUT /departments              ###");   
     content = request.get_json()
 
     conn = db_connection()

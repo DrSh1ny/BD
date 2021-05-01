@@ -1,0 +1,11 @@
+Criar DB Container
+    docker run -d -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=postgres postgres
+
+Abrir DB Container
+    docker exec -it postgres psql -d postgres -U postgres
+
+Criar PGAdmin Container
+    docker run -d -p 80:80 --name pgadmin -e 'PGADMIN_DEFAULT_EMAIL=someone@dei.uc.pt' -e 'PGADMIN_DEFAULT_PASSWORD=pass12345' dpage/pgadmin4
+
+IP DB Container
+    docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgres
