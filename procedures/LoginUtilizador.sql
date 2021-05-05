@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION loginUser(p_nome pessoa.nome%type,p_password pessoa.nome%type) returns varchar
+CREATE OR REPLACE FUNCTION loginUser(p_nome pessoa.nome%type,p_password pessoa.nome%type) returns bigint
 LANGUAGE 'plpgsql'
 AS $BODY$
 declare
@@ -12,8 +12,14 @@ declare
 	expiration pessoa.exp_date%type;
 	aux varchar;
 begin
+	--check if email already exists
+	if(p_nome='' or p_password='') then
+		return -2;
+	end if;
+
 	open c1(p_nome,p_password);
 	fetch c1 into resPessoa;
+
 	if(found) then
 		select substr(md5(random()::text), 0, 50) into aux;
 		update pessoa
@@ -21,7 +27,7 @@ begin
 		where current of c1;
 		return aux;
 	else
-		return null;
+		return -1;
 	end if;
 end;   
 $BODY$;

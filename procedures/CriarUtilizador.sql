@@ -15,18 +15,22 @@ declare
 	id  pessoa.id%type;
 begin
 	--check if email already exists
+	if(p_nome='' or p_password='' or p_email='') then
+		return -3;
+	end if;
+	--check if email already exists
 	open cursorEmail(p_email);
 	fetch cursorEmail into resEmail;
 	if(found) THEN
 		close cursorEmail;
-		return null;
+		return -2;
 	end if;
 	--check if nome already exists
 	open cursorNome(p_nome);
 	fetch cursorNome into resNome;
 	if(found) THEN
 		close cursorNome;
-		return null;
+		return -1;
 	end if;
 	--insert new pessoa and return new id
 	insert into pessoa(nome,email,password)
