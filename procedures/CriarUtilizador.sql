@@ -33,7 +33,7 @@ begin
 		return -1;
 	end if;
 	--insert new pessoa and return new id
-	insert into pessoa(nome,email,password)
+	insert into pessoa(NULL,nome,email,password)
 	values(p_nome,p_email,p_password);
 	select pessoa.id from pessoa where nome=p_nome into id;
 	close cursorEmail;

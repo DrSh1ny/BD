@@ -1,0 +1,6 @@
+[config]
+DB_IP=localhost
+DB_Port=5432
+DB_User=postgres
+DB_Password=postgres
+DB_Name=postgres
