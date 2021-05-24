@@ -12,7 +12,7 @@ declare
 		where nome=newNome;
 	resEmail pessoa.email%type;
 	resNome pessoa.nome%type;
-	id  pessoa.id%type;
+	idNovo  pessoa.id%type;
 begin
 	--check if email already exists
 	if(p_nome='' or p_password='' or p_email='') then
@@ -33,11 +33,11 @@ begin
 		return -1;
 	end if;
 	--insert new pessoa and return new id
-	insert into pessoa(NULL,nome,email,password)
-	values(p_nome,p_email,p_password);
-	select pessoa.id from pessoa where nome=p_nome into id;
+	insert into pessoa(nome,email,password)
+		values(p_nome,p_email,p_password)
+		returning id into idNovo;
 	close cursorEmail;
 	close cursorNome;
-	return id;
+	return idNovo;
 end;
 $BODY$;

@@ -1,15 +1,16 @@
-CREATE OR REPLACE FUNCTION listUsers() 
-    RETURNS TABLE (
-        id Pessoa.id%type,
-        nome Pessoa.nome%type,
+create or replace function listUsers ()
+	returns table (
+		id Pessoa.id%type,
+		nome Pessoa.nome%type,
 		email Pessoa.email%type
-) 
-LANGUAGE plpgsql
-AS $BODY$
-declare
+	) 
+	language plpgsql
+as $$
 begin
-	return query select 
-	pessoa.id,pessoa.nome,pessoa.email 
-	from Pessoa;
+	return query 
+		select
+			pessoa.id,pessoa.nome,pessoa.email
+		from
+			pessoa;
 end;
-$BODY$;
+$$

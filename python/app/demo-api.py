@@ -58,6 +58,42 @@ def add_user():
             content = {'userId': id}
 
     except (Exception) as error:
+        print(error)
+        content = {'erro': 412}     
+
+    finally:
+        if conn is not None:
+            conn.close()
+    return jsonify(content)
+
+#######################################
+########## Login User #################
+#######################################
+
+@app.route("/user/", methods=['PUT'])
+def login_user():
+    logger.info("###              DEMO: PUT /user              ###")
+    payload = request.get_json(force=True)
+    logger.debug("payload: {0}".format(payload))
+
+    conn = db_connection()
+    cur = conn.cursor()
+    try:
+        values = (payload["username"],payload["password"])
+        
+        cur.execute("""
+                        select loginUser('{0}','{1}');
+                        """.format(values[0],values[1]))
+        response = cur.fetchall()
+        conn.commit()
+        token=response[0][0]
+        if(token in [-1,-2,-3]):
+            content={'erro':412}
+        else:
+            content = {'authToken': token}
+
+    except (Exception) as error:
+        print(error)
         content = {'erro': 412}     
 
     finally:
@@ -65,7 +101,40 @@ def add_user():
             conn.close()
     return jsonify(content)
     
+#######################################
+########## Create Auction #############
+#######################################
 
+@app.route("/leilao/", methods=['POST'])
+def create_auction():
+    logger.info("###              DEMO: POST /leilao              ###")
+    payload = request.get_json(force=True)
+    logger.debug("payload: {0}".format(payload))
+
+    conn = db_connection()
+    cur = conn.cursor()
+    try:
+        values = (payload["authToken"], payload["titulo"], payload["descricao"],payload["data_inicio"],payload["data_fim"],payload["precoMinimo"],payload["artigoId"])
+        
+        cur.execute("""
+                        select createAuction('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'); 
+                        """.format(values[0],values[1],values[2],values[3],values[4],int(values[5]),int(values[6])))
+        response = cur.fetchall()
+        conn.commit()
+        id=response[0][0]
+        if(id in [-3,-2,-1]):
+            content={'erro':412}
+        else:
+            content = {'leilaoId': id}
+
+    except (Exception) as error:
+        print(error)
+        content = {'erro': 412}     
+
+    finally:
+        if conn is not None:
+            conn.close()
+    return jsonify(content)
 
 
 

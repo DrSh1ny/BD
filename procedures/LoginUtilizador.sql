@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION loginUser(p_nome pessoa.nome%type,p_password pessoa.nome%type) returns bigint
+CREATE OR REPLACE FUNCTION loginUser(p_nome pessoa.nome%type,p_password pessoa.nome%type) returns Pessoa.auth_token%type
 LANGUAGE 'plpgsql'
 AS $BODY$
 declare
@@ -23,7 +23,7 @@ begin
 	if(found) then
 		select substr(md5(random()::text), 0, 50) into aux;
 		update pessoa
-		set auth_token=aux, exp_date=current_timestamp
+		set auth_token=aux, exp_date=current_timestamp + (60 * interval '1 minute')
 		where current of c1;
 		return aux;
 	else

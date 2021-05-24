@@ -1,19 +1,19 @@
 CREATE OR REPLACE FUNCTION createAuction(
-    p_artigo_codigo     artigo.codigo%type,
-    p_preco_inicial     leilao.preco_inicial%type,
-    p_titulo            leilao.titulo%type,
-    p_descricao         leilao.descricao%type,
-    p_pessoa_id         pessoa.id%type,
-    p_data_inicio       leilao.data_inicio%type,
-    p_data_fim          leilao.data_fim%type
-) returns leilao.id%type
+	auth_Token         	text,
+	p_titulo            text,
+	p_descricao         text,
+	p_data_inicio       TIMESTAMP,
+	p_data_fim          TIMESTAMP,
+	p_preco_inicial     bigint,
+    p_artigo_codigo     bigint
+) returns bigint
 LANGUAGE 'plpgsql'
 AS $BODY$
 declare
-    c1 cursor(pessoa_id bigint) for
+    c1 cursor(in_auth_Token text) for
         select id
         from pessoa
-        where id=pessoa_id;
+        where pessoa.auth_token=in_auth_Token and CURRENT_DATE<exp_date;
     c2 cursor(artigo_id artigo.codigo%type) for
         select codigo
         from artigo
@@ -28,7 +28,7 @@ begin
     end if;
 	
     --check if user exists
-    open c1(p_pessoa_id);
+    open c1(auth_Token);
 	fetch c1 into idPessoa;
     if (not found) then
         return -2;
@@ -39,7 +39,7 @@ begin
     open c2(p_artigo_codigo);
 	fetch c2 into codigoArtigo;
     if (not found) then
-        return -3;
+        insert into artigo values(p_artigo_codigo);
     end if;
     close c2;
 	
@@ -49,10 +49,9 @@ begin
     end if;
     
     insert into leilao(titulo,descricao,data_inicio,data_fim,preco_inicial,pessoa_id,artigo_codigo) 
-	values(p_titulo,p_descricao,p_data_inicio,p_data_fim,p_preco_inicial,p_pessoa_id,p_artigo_codigo)
+	values(p_titulo,p_descricao,p_data_inicio,p_data_fim,p_preco_inicial,idPessoa,p_artigo_codigo)
 	returning id into idNovo;
 	return idNovo;
 	
 end;
 $BODY$;
-
