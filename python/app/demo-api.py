@@ -136,7 +136,58 @@ def create_auction():
             conn.close()
     return jsonify(content)
 
+#######################################
+##### List Auctions In Progress #######
+#######################################
 
+@app.route("/leilao/", methods=['GET'])
+def get_autions_in_progress():
+    logger.info("###              DEMO: GET /leilao              ###")
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""
+                    select * from listLeiloes();
+                    """)
+    response = cur.fetchall()
+    payload=[]
+    for row in response:
+        logger.debug(row)
+        content = {'id': int(row[0]), 'descricao': row[1]}
+        payload.append(content)  # appending to the payload to be returned
+
+    conn.close()
+    return jsonify(payload)
+
+#######################################
+# List Auctions In Progress by Keyword 
+#######################################
+
+@app.route("/leilao/<keyword>", methods=['GET'])
+def get_autions_in_progress_by_keyword(keyword):
+    logger.info("###              DEMO: GET /leilao<keyword>              ###")
+    logger.debug(f'keyword: {keyword}')
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    cur.execute("""
+                    select * from listLeiloesFromKeyword({0});
+                    """.format("'"+keyword+"'"))
+    response = cur.fetchall()
+    payload=[]
+    for row in response:
+        logger.debug(row)
+        content = {'id': int(row[0]), 'descricao': row[1]}
+        payload.append(content)  # appending to the payload to be returned
+
+    conn.close()
+    return jsonify(payload)
+
+#######################################
+##### Database connection #############
+#######################################
 
 def db_connection():
     configParser = configparser.RawConfigParser()

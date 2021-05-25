@@ -1,20 +1,18 @@
-CREATE OR REPLACE PROCEDURE public.ListAuctions(
-    <p_data leilao.data_inicio%type>,
-
-)
-
-LANGUAGE 'plpgsql'
-AS $BODY$
-declare
-
-
+create or replace function listLeiloes ()
+	returns table (
+		id leilao.id%type,
+		descricao leilao.descricao%type
+	) 
+	language plpgsql
+as $$
 begin
-	
-
-    -- SELECT
-	select id, descricao from leilao where p_data BETWEEN data_inicio and data_fim;
-
+	return query 
+		select
+			leilao.id,leilao.descricao
+		from
+			leilao
+		where
+			leilao.data_inicio<current_timestamp and leilao.data_fim>current_timestamp;
 end;
-
-$BODY$;
+$$
 
