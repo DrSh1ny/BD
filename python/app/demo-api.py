@@ -11,7 +11,7 @@ app = Flask(__name__)
 ########## Obtain All Users ###########
 #######################################
 
-@app.route("/user/", methods=['GET'])
+@app.route("/dbproj/user/", methods=['GET'])
 def get_all_user():
     logger.info("###              DEMO: GET /user              ###")
 
@@ -35,7 +35,7 @@ def get_all_user():
 ########## Create New User ############
 #######################################
 
-@app.route("/user/", methods=['POST'])
+@app.route("/dbproj/user/", methods=['POST'])
 def add_user():
     logger.info("###              DEMO: POST /user              ###")
     payload = request.get_json(force=True)
@@ -70,7 +70,7 @@ def add_user():
 ########## Login User #################
 #######################################
 
-@app.route("/user/", methods=['PUT'])
+@app.route("/dbproj/user/", methods=['PUT'])
 def login_user():
     logger.info("###              DEMO: PUT /user              ###")
     payload = request.get_json(force=True)
@@ -105,7 +105,7 @@ def login_user():
 ########## Create Auction #############
 #######################################
 
-@app.route("/leilao/", methods=['POST'])
+@app.route("/dbproj/leilao/", methods=['POST'])
 def create_auction():
     logger.info("###              DEMO: POST /leilao              ###")
     payload = request.get_json(force=True)
@@ -140,7 +140,7 @@ def create_auction():
 ##### List Auctions In Progress #######
 #######################################
 
-@app.route("/leilao/", methods=['GET'])
+@app.route("/dbproj/leilao/", methods=['GET'])
 def get_autions_in_progress():
     logger.info("###              DEMO: GET /leilao              ###")
 
@@ -164,7 +164,7 @@ def get_autions_in_progress():
 # List Auctions In Progress by Keyword 
 #######################################
 
-@app.route("/leilao/<keyword>", methods=['GET'])
+@app.route("/dbproj/leilao/<keyword>", methods=['GET'])
 def get_autions_in_progress_by_keyword(keyword):
     logger.info("###              DEMO: GET /leilao<keyword>              ###")
     logger.debug(f'keyword: {keyword}')
