@@ -225,19 +225,27 @@ def get_leilao_info(id, value):
     conn = db_connection()
     cur = conn.cursor()
 
-    cur.execute("select max(preco) from licitacao where leilao_id = %s",(id,))
-    rows = cur.fetchall()
-    row = rows[0]
+    tempo = time.now();
+    try:
+        cur.execute("""
+                        select createLicitation('{0}','{1}','{2}');
+                        """.format(id,value, tempo))
+        response = cur.fetchall()
+        conn.commit()
+        token=response[0][0]
+        if(token in [-1,-2,-3]):
+            content={'erro':412}
+        else:
+            content = {'authToken': token}
+    
+    except (Exception) as error:
+        print(error)
+        content = {'erro': 412}     
 
-
-    if row[0]>= value:
-        total = {"erro": "valor menor do que maximo"}
-        conn.close ()
-        return jsonify(total)
-    else:
-
-        #INSERT
-        pass
+    finally:
+        if conn is not None:
+            conn.close()
+    return jsonify(content)
 
 
 
