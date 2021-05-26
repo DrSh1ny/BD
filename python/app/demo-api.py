@@ -204,6 +204,10 @@ def db_connection():
     db.autocommit=False
     return db
 
+#######################################
+############### Main ##################
+#######################################
+
 if __name__ == "__main__":
     # Set up the logging
     logging.basicConfig(filename="C:/Users/franc/Desktop/BD/python/app/logs/log_file.log")
