@@ -13,7 +13,7 @@ app = Flask(__name__)
 ##
 ## To use it, access: 
 ## 
-##   http://localhost:8080/dbproj/leilao/10
+##   http://localhost:8080/dbproj/leiloes
 ##
 
 @app.route("/dbproj/leiloes", methods=['GET'])
@@ -61,7 +61,21 @@ def get_leilao_by_keyword(keyword):
     conn = db_connection()
     cur = conn.cursor()
 
-    pass
+
+    ## Leilao Info
+    cur.execute("SELECT id, titulo, descricao, data_inicio, data_fim, preco_inicial FROM leilao where descricao like '%%s%'",(keyword,) )
+    rows = cur.fetchall()
+
+    logger.debug("---- selected Leilao  ----")
+    leiloes = []
+    for row in rows:
+
+        logger.debug(row)
+        leilao_info = {'id': row[0], 'titulo': row[1], 'descricao': row[2], 'data_inicio': row[3], 'data_fim' :row[4], 'preco_inicial': row[5]}
+        leiloes.append(leilao_info)
+
+    conn.close ()
+    return jsonify(leiloes)
 
 ##
 ##      GET
