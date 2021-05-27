@@ -10,30 +10,18 @@ CREATE OR REPLACE FUNCTION editAuction(
 LANGUAGE 'plpgsql'
 AS $BODY$
 declare
-    c1 cursor(in_auth_Token text) for
-        select id
-        from pessoa
-        where pessoa.auth_token=in_auth_Token and CURRENT_DATE<exp_date;
+
     c2 cursor(artigo_id artigo.codigo%type) for
         select codigo
         from artigo
         where codigo=artigo_id;
-    idNovo bigint;
-	idPessoa bigint;
-	codigoArtigo bigint;
+
 begin
     --check if parameters are set
     if(p_titulo='' or p_descricao='') then
         return -1;
     end if;
 	
-    --check if user exists
-    open c1(auth_Token);
-	fetch c1 into idPessoa;
-    if (not found) then
-        return -2;
-    end if;
-    close c1;
 	
     --check if product exists
     open c2(p_artigo_codigo);

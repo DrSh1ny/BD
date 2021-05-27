@@ -1,7 +1,6 @@
 CREATE OR REPLACE FUNCTION createLicitation(
 	p_id                bigint,
 	p_value             bigint,
-    p_date              leilao.data_inicio%type,
     p_pessoa_id         bigint,
 
 ) returns bigint
@@ -28,12 +27,12 @@ begin
     end if;
 
     --check if time passed
-    if(p_date < data_inicial || p_date > data_final)
+    if(current_timestamp < data_inicial || current_timestamp > data_final)
         return -3;
     end if;
     
     insert into licitacao(preco, data, leilao_id, pessoa_id)
-    values(p_value, p_date, p_id, p_pessoa_id)
+    values(p_value, current_timestamp, p_id, p_pessoa_id)
 
 	return p_id;
 	

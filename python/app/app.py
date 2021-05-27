@@ -226,10 +226,12 @@ def get_leilao_info(id, value):
     cur = conn.cursor()
 
     tempo = time.now();
+
+    pessoa_id = 0;
     try:
         cur.execute("""
                         select createLicitation('{0}','{1}','{2}');
-                        """.format(id,value, tempo))
+                        """.format(id,value, pessoa_id))
         response = cur.fetchall()
         conn.commit()
         token=response[0][0]
@@ -248,6 +250,43 @@ def get_leilao_info(id, value):
     return jsonify(content)
 
 
+#######################################
+########## Create Auction #############
+#######################################
+
+@app.route("/dbproj/leilao/<id>", methods=['POST'])
+def edit_auction(id):
+    logger.info("###              DEMO: POST /leilao              ###")
+    payload = request.get_json(force=True)
+    logger.debug("payload: {0}".format(payload))
+
+    
+    logger.debug(f'id: {id}')
+
+    conn = db_connection()
+    cur = conn.cursor()
+    try:
+        values = (id, payload["titulo"], payload["descricao"],payload["data_inicio"],payload["data_fim"],payload["precoMinimo"],payload["artigoId"])
+        
+        cur.execute("""
+                        select editAuction('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'); 
+                        """.format(values[0],values[1],values[2],values[3],values[4],int(values[5]),int(values[6])))
+        response = cur.fetchall()
+        conn.commit()
+        id=response[0][0]
+        if(id in [-3,-2,-1]):
+            content={'erro':412}
+        else:
+            content = {'leilaoId': id}
+
+    except (Exception) as error:
+        print(error)
+        content = {'erro': 412}     
+
+    finally:
+        if conn is not None:
+            conn.close()
+    return jsonify(content)
 
 
 
