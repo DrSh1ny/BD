@@ -1,39 +1,40 @@
-CREATE OR REPLACE PROCEDURE public.CreateLicitation(
-    <p_leilao_id leilao.id%type>,
-    <p_pessoa_id pessoa.id%type>,
-    <preco licitacao.preco%type>,
+CREATE OR REPLACE FUNCTION createLicitation(
+	p_id                bigint,
+	p_value             bigint,
+    p_pessoa_id         bigint,
 
-)
-
+) returns bigint
 LANGUAGE 'plpgsql'
 AS $BODY$
 declare
 
-    v_preco licitacao.preco%type;
-
-    cursor c1 from
+    c1 cursor(in_max_preco bigint) for
         select max(preco) from licitacao where leilao_id = p_leilao_id;
 
-    cursor c2 from
+    c2 cursor(data_inicial data_inicio%type, data_final data_fim%type) for
         select data_inicio, data_fim from leilao where id = p_leilao_id;
 
 
 begin
+	
+    --check if id exists
+    if(p_id == '')
+        return -1;
+    end if;
+    --check if value is higher or lower
+    if(in_max_preco >= p_value)
+        return -2;
+    end if;
 
-    fetch c1 into v_preco;
-
-    --Do Stuff
-
+    --check if time passed
+    if(current_timestamp < data_inicial || current_timestamp > data_final)
+        return -3;
+    end if;
     
+    insert into licitacao(preco, data, leilao_id, pessoa_id)
+    values(p_value, current_timestamp, p_id, p_pessoa_id)
+
+	return p_id;
+	
 end;
-
 $BODY$;
-
-
-CREATE TABLE licitacao (
-	preco	 BIGINT NOT NULL,
-	data	 TIMESTAMP,
-	leilao_id BIGINT,
-	pessoa_id BIGINT,
-	PRIMARY KEY(data,leilao_id,pessoa_id)
-);
