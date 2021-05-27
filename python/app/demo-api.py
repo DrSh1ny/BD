@@ -3,7 +3,6 @@ import logging
 import psycopg2
 import time
 import configparser 
-import ast
 
 app = Flask(__name__)
 
@@ -22,6 +21,7 @@ def get_all_user():
                     select * from listUsers();
                     """)
     response = cur.fetchall()
+    logger.debug("response: {0}".format(response))
     payload=[]
     for row in response:
         logger.debug(row)
@@ -50,6 +50,7 @@ def add_user():
                         select registeruser('{0}', '{1}', '{2}'); 
                         """.format(values[0],values[1],values[2]))
         response = cur.fetchall()
+        logger.debug("response: {0}".format(response))
         conn.commit()
         id=response[0][0]
         if(id in [-3,-2,-1]):
@@ -85,6 +86,7 @@ def login_user():
                         select loginUser('{0}','{1}');
                         """.format(values[0],values[1]))
         response = cur.fetchall()
+        logger.debug("response: {0}".format(response))
         conn.commit()
         token=response[0][0]
         if(token in [-1,-2,-3]):
@@ -120,6 +122,7 @@ def create_auction():
                         select createAuction('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'); 
                         """.format(values[0],values[1],values[2],values[3],values[4],int(values[5]),int(values[6])))
         response = cur.fetchall()
+        logger.debug("response: {0}".format(response))
         conn.commit()
         id=response[0][0]
         if(id in [-3,-2,-1]):
@@ -151,6 +154,7 @@ def get_autions_in_progress():
                     select * from listLeiloes();
                     """)
     response = cur.fetchall()
+    logger.debug("response: {0}".format(response))
     payload=[]
     for row in response:
         logger.debug(row)
@@ -176,6 +180,7 @@ def get_autions_in_progress_by_keyword(keyword):
                     select * from listLeiloesFromKeyword({0});
                     """.format("'"+keyword+"'"))
     response = cur.fetchall()
+    logger.debug("response: {0}".format(response))
     payload=[]
     for row in response:
         logger.debug(row)
@@ -184,6 +189,42 @@ def get_autions_in_progress_by_keyword(keyword):
 
     conn.close()
     return jsonify(payload)
+
+#######################################
+######## Write in Message Board #######
+#######################################
+
+@app.route("/dbproj/mural/", methods=['POST'])
+def post_in_message_board():
+    logger.info("###              DEMO: POST /mural              ###")
+    payload = request.get_json(force=True)
+    logger.debug("payload: {0}".format(payload))
+
+    conn = db_connection()
+    cur = conn.cursor()
+    try:
+        values = (payload["authToken"],payload["leilaoId"], payload["titulo"], payload["descricao"])
+        
+        cur.execute("""
+                        select PostMessageOnBoard('{0}', '{1}', '{2}', '{3}'); 
+                        """.format(values[0],values[1],values[2],values[3]))
+        response = cur.fetchall()
+        logger.debug("response: {0}".format(response))
+        conn.commit()
+        id=response[0][0]
+        if(id in [-3,-2,-1]):
+            content={'erro':412}
+        else:
+            content = {'status': 'sucesso'}
+
+    except (Exception) as error:
+        print(error)
+        content = {'erro': 412}     
+
+    finally:
+        if conn is not None:
+            conn.close()
+    return jsonify(content)
 
 #######################################
 ##### Database connection #############
@@ -223,8 +264,5 @@ if __name__ == "__main__":
     logger.addHandler(ch)
 
     time.sleep(1)  # just to let the DB start before this print :-)
-
-    logger.info("\n---------------------------------------------------------------\n" +
-                "API v1.0 online: http://localhost:8080/departments/\n\n")
 
     app.run(host="localhost", port=8080, debug=True, threaded=True)
