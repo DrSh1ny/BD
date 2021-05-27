@@ -15,7 +15,7 @@ declare
         select codigo
         from artigo
         where codigo=artigo_id;
-
+	codigoArtigo bigint;
 begin
     --check if parameters are set
     if(p_titulo='' or p_descricao='') then
