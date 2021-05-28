@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request,session,session
 import logging
 import psycopg2
 import time
@@ -12,6 +12,11 @@ app = Flask(__name__)
 
 @app.route("/dbproj/user/", methods=['GET'])
 def get_all_user():
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
+        
     logger.info("###              DEMO: GET /user              ###")
 
     conn = db_connection()
@@ -93,6 +98,7 @@ def login_user():
             content={'erro':412}
         else:
             content = {'authToken': token}
+            session["authToken"]=token
 
     except (Exception) as error:
         print(error)
@@ -109,6 +115,11 @@ def login_user():
 
 @app.route("/dbproj/leilao/", methods=['POST'])
 def create_auction():
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
+
     logger.info("###              DEMO: POST /leilao              ###")
     payload = request.get_json(force=True)
     logger.debug("payload: {0}".format(payload))
@@ -116,16 +127,16 @@ def create_auction():
     conn = db_connection()
     cur = conn.cursor()
     try:
-        values = (payload["authToken"], payload["titulo"], payload["descricao"],payload["data_inicio"],payload["data_fim"],payload["precoMinimo"],payload["artigoId"])
-        
+        values = (payload["titulo"], payload["descricao"],payload["data_inicio"],payload["data_fim"],payload["precoMinimo"],payload["artigoId"])
+    
         cur.execute("""
                         select createAuction('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'); 
-                        """.format(values[0],values[1],values[2],values[3],values[4],int(values[5]),int(values[6])))
+                        """.format(idUser,values[0],values[1],values[2],values[3],int(values[4]),int(values[5])))
         response = cur.fetchall()
         logger.debug("response: {0}".format(response))
         conn.commit()
         id=response[0][0]
-        if(id in [-3,-2,-1]):
+        if(id in [-4,-3,-2,-1]):
             content={'erro':412}
         else:
             content = {'leilaoId': id}
@@ -145,6 +156,11 @@ def create_auction():
 
 @app.route("/dbproj/leiloes/", methods=['GET'])
 def get_autions_in_progress():
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
+
     logger.info("###              DEMO: GET /leilao              ###")
 
     conn = db_connection()
@@ -170,6 +186,11 @@ def get_autions_in_progress():
 
 @app.route("/dbproj/leiloes/<keyword>", methods=['GET'])
 def get_autions_in_progress_by_keyword(keyword):
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
+
     logger.info("###              DEMO: GET /leilao<keyword>              ###")
     logger.debug(f'keyword: {keyword}')
 
@@ -191,11 +212,16 @@ def get_autions_in_progress_by_keyword(keyword):
     return jsonify(payload)
 
 #######################################
-# List Auction by ID 
+######## List Auction by ID ###########
 #######################################
 
 @app.route("/dbproj/leilao/<id>", methods=['GET'])
 def get_leilao_info(id):
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
+
     logger.info("###              DEMO: GET dbproj/Leilao/<id>              ###");   
 
     logger.debug(f'id: {id}')
@@ -264,11 +290,16 @@ def get_leilao_info(id):
 
 
 #######################################
-# List Auctions of User
+######### List Auctions of User #######
 #######################################
 
 @app.route("/dbproj/pessoa/<id>", methods=['GET'])
 def get_pessoa_activity(id):
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
+
     logger.info("###              DEMO: GET dbproj/pessoa/<id>/              ###");   
 
     logger.debug(f'id: {id}')
@@ -304,11 +335,16 @@ def get_pessoa_activity(id):
     return jsonify(total)
 
 #######################################
-##########  Edit Auction  #############
+########## Edit Auction ###############
 #######################################
 
 @app.route("/dbproj/leilao/<id>", methods=['POST'])
 def edit_auction(id):
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
+
     logger.info("###              DEMO: POST /leilao              ###")
     payload = request.get_json(force=True)
     logger.debug("payload: {0}".format(payload))
@@ -341,13 +377,17 @@ def edit_auction(id):
             conn.close()
     return jsonify(content)
 
-
 #######################################
-########## Create Licitation ##########
+######### Make Licitation #############
 #######################################
 
-@app.route("/dbproj/leilao/<id>/<value>", methods=['GET'])
-def get_licitacao(id, value):
+@app.route("/dbproj/licitar/<id>/<value>", methods=['GET'])
+def create_licitation(id, value):
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
+
     logger.info("###              DEMO: GET dbproj/licitar/<id>/<value>              ###");   
 
     logger.debug(f'id: {id}, value: {value}')
@@ -355,23 +395,21 @@ def get_licitacao(id, value):
     conn = db_connection()
     cur = conn.cursor()
 
-    pessoa_id = 0
     try:
         cur.execute("""
                         select createLicitation('{0}','{1}','{2}');
-                        """.format(id,value, pessoa_id))
+                        """.format(idUser,id, value))
         response = cur.fetchall()
         conn.commit()
         token=response[0][0]
         if(token in [-1,-2,-3]):
             content={'erro':412}
         else:
-            content = {'authToken': token}
+            content = {'status': 400}
     
     except (Exception) as error:
         print(error)
         content = {'erro': 412}     
-
     finally:
         if conn is not None:
             conn.close()
@@ -417,6 +455,11 @@ def edit_auction(id):
 
 @app.route("/dbproj/mural/", methods=['POST'])
 def post_in_message_board():
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
+
     logger.info("###              DEMO: POST /mural              ###")
     payload = request.get_json(force=True)
     logger.debug("payload: {0}".format(payload))
@@ -424,11 +467,11 @@ def post_in_message_board():
     conn = db_connection()
     cur = conn.cursor()
     try:
-        values = (payload["authToken"],payload["leilaoId"], payload["titulo"], payload["descricao"])
+        values = (payload["leilaoId"], payload["titulo"], payload["descricao"])
         
         cur.execute("""
                         select PostMessageOnBoard('{0}', '{1}', '{2}', '{3}'); 
-                        """.format(values[0],values[1],values[2],values[3]))
+                        """.format(idUser,values[0],values[1],values[2]))
         response = cur.fetchall()
         logger.debug("response: {0}".format(response))
         conn.commit()
@@ -446,6 +489,23 @@ def post_in_message_board():
         if conn is not None:
             conn.close()
     return jsonify(content)
+
+#######################################
+#### Check if Client is Logged in #####
+#######################################
+
+def checkLogin():
+    try:
+        conn = db_connection()
+        cur = conn.cursor()
+        cur.execute("""
+                        select getPessoaByAuthToken('{0}'); 
+                        """.format(session['authToken']))
+        response = cur.fetchall()
+        id=response[0][0]
+        return id
+    except (KeyError) as error:
+        return -1
 
 #######################################
 ##### Database connection #############
@@ -486,4 +546,6 @@ if __name__ == "__main__":
 
     time.sleep(1)  # just to let the DB start before this print :-)
 
+    app.secret_key="any random string"
     app.run(host="localhost", port=8080, debug=True, threaded=True)
+    

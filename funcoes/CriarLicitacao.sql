@@ -1,40 +1,35 @@
 CREATE OR REPLACE FUNCTION createLicitation(
-	p_id                bigint,
-	p_value             bigint,
-    p_pessoa_id         bigint,
-
-) returns bigint
+	pessoa_id	bigint,
+	leilao_id	bigint,
+	preco_oferecido		bigint
+) returns int
 LANGUAGE 'plpgsql'
 AS $BODY$
 declare
-
-    c1 cursor(in_max_preco bigint) for
-        select max(preco) from licitacao where leilao_id = p_leilao_id;
-
-    c2 cursor(data_inicial data_inicio%type, data_final data_fim%type) for
-        select data_inicio, data_fim from leilao where id = p_leilao_id;
-
-
+	aux record;
+	c1 cursor(leilaoID bigint) for
+		select * from leilao where id = leilaoID;
+	c2 cursor(leilaoID bigint) for
+        select *
+		from licitacao
+		where licitacao.leilao_id=leilaoID and licitacao.preco=(select max(preco) from licitacao where licitacao.leilao_id=leilaoID);
 begin
-	
-    --check if id exists
-    if(p_id == '')
-        return -1;
-    end if;
-    --check if value is higher or lower
-    if(in_max_preco >= p_value)
-        return -2;
-    end if;
-
-    --check if time passed
-    if(current_timestamp < data_inicial || current_timestamp > data_final)
-        return -3;
-    end if;
-    
-    insert into licitacao(preco, data, leilao_id, pessoa_id)
-    values(p_value, current_timestamp, p_id, p_pessoa_id)
-
-	return p_id;
-	
+	open c1(leilao_id);
+	fetch c1 into aux;
+	close c1;
+	if(not found) then
+		return -1;
+	end if;
+	if(aux.data_inicio > CURRENT_TIMESTAMP OR aux.data_fim<CURRENT_TIMESTAMP OR aux.preco_inicial>preco_oferecido) then
+		return -2;
+	end if;
+	open c2(leilao_id);
+	fetch c2 into aux;
+	close c2;
+	if(found and (aux.preco>=preco_oferecido or aux.pessoa_id=pessoa_id)) then 
+		return -3;
+	end if;
+	insert into licitacao(leilao_id,pessoa_id,preco,data) values(leilao_id,pessoa_id,preco_oferecido,CURRENT_TIMESTAMP);
+	return 0;
 end;
 $BODY$;

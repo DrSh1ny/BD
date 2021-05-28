@@ -13,7 +13,7 @@ declare
 
     c1 cursor for 
         select titulo, descricao, data_inicio, data_fim, preco_inicial, artigo_codigo
-        from leilao 
+        from leilao
         where p_id = id;
 
     v_titulo text;
@@ -33,7 +33,6 @@ begin
     if(p_titulo='' or p_descricao='') then
         return -1;
     end if;
-	
 	
     --check if product exists
     open c2(p_artigo_codigo);
