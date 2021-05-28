@@ -304,7 +304,7 @@ def get_pessoa_activity(id):
     return jsonify(total)
 
 #######################################
-########## Edit Auction #############
+##########  Edit Auction  #############
 #######################################
 
 @app.route("/dbproj/leilao/<id>", methods=['POST'])
@@ -328,7 +328,7 @@ def edit_auction(id):
         conn.commit()
         id=response[0][0]
         if(id in [-3,-2,-1]):
-            content={'erro':412}
+            content={'erro':id}
         else:
             content = {'leilaoId': id}
 
@@ -342,8 +342,12 @@ def edit_auction(id):
     return jsonify(content)
 
 
+#######################################
+########## Create Licitation ##########
+#######################################
+
 @app.route("/dbproj/leilao/<id>/<value>", methods=['GET'])
-def get_leilao_info(id, value):
+def get_licitacao(id, value):
     logger.info("###              DEMO: GET dbproj/licitar/<id>/<value>              ###");   
 
     logger.debug(f'id: {id}, value: {value}')
@@ -372,6 +376,40 @@ def get_leilao_info(id, value):
         if conn is not None:
             conn.close()
     return jsonify(content)
+
+
+#######################################
+#######  Obtain Notifications #########
+#######################################
+
+@app.route("/dbproj/notifications/<id>", methods=['GET'])
+def edit_auction(id):
+    logger.info("###              DEMO: GET  Notifications          ###")
+    
+    logger.debug(f'id: {id}')
+
+    conn = db_connection()
+    cur = conn.cursor()
+    try:
+        cur.execute("""
+                        select listNotifications('{0}'); 
+                        """.format(id))
+        response = cur.fetchall()
+        conn.commit()
+        notifications = []
+        for row in response:
+            logger.debug(row)
+            notification = {'pessoa': row[0], 'mensagem': row[1], 'lida': row[2]}
+            notifications.append(notification)
+
+    except (Exception) as error:
+        print(error)
+        notifications = {'erro': 412}     
+
+    finally:
+        if conn is not None:
+            conn.close()
+    return jsonify(notifications)
     
 #######################################
 ######## Write in Message Board #######
@@ -434,7 +472,7 @@ def db_connection():
 
 if __name__ == "__main__":
     # Set up the logging
-    logging.basicConfig(filename="C:/Users/franc/Desktop/BD/python/app/logs/log_file.log")
+    logging.basicConfig(filename="./logs/log_file.log")
     logger = logging.getLogger('logger')
     logger.setLevel(logging.DEBUG)
     ch = logging.StreamHandler()

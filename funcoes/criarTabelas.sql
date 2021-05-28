@@ -55,21 +55,27 @@ CREATE TABLE historico (
 	data_alteracao TIMESTAMP NOT NULL,
 	titulo	 VARCHAR(512) NOT NULL,
 	descricao	 VARCHAR(512),
+	data_inicio	 TIMESTAMP NOT NULL,
+	data_fim	 TIMESTAMP NOT NULL,
+	preco_inicial INTEGER NOT NULL,
+	pessoa_id	 BIGINT NOT NULL,
+	artigo_codigo BIGINT NOT NULL,
 	leilao_id	 BIGINT,
-	PRIMARY KEY(leilao_id)
+	PRIMARY KEY(leilao_id, data_alteracao)
 );
 
 CREATE TABLE notificacao_pessoa (
 	lida		 BOOL NOT NULL,
-	notificacao_data TIMESTAMP,
+	notificacao_id BIGINT,
 	pessoa_id	 BIGINT,
-	PRIMARY KEY(notificacao_data,pessoa_id)
+	PRIMARY KEY(notificacao_id, pessoa_id)
 );
 
 CREATE TABLE notificacao (
 	mensagem VARCHAR(512) NOT NULL,
 	data	 TIMESTAMP,
-	PRIMARY KEY(data)
+	id		 serial,
+	PRIMARY KEY(id)
 );
 
 ALTER TABLE leilao ADD CONSTRAINT leilao_fk1 FOREIGN KEY (pessoa_id) REFERENCES pessoa(id);
@@ -79,5 +85,5 @@ ALTER TABLE licitacao ADD CONSTRAINT licitacao_fk2 FOREIGN KEY (pessoa_id) REFER
 ALTER TABLE mensagem ADD CONSTRAINT mensagem_fk1 FOREIGN KEY (leilao_id) REFERENCES leilao(id);
 ALTER TABLE mensagem ADD CONSTRAINT mensagem_fk2 FOREIGN KEY (pessoa_id) REFERENCES pessoa(id);
 ALTER TABLE historico ADD CONSTRAINT historico_fk1 FOREIGN KEY (leilao_id) REFERENCES leilao(id);
-ALTER TABLE notificacao_pessoa ADD CONSTRAINT notificacao_pessoa_fk1 FOREIGN KEY (notificacao_data) REFERENCES notificacao(data);
+ALTER TABLE notificacao_pessoa ADD CONSTRAINT notificacao_pessoa_fk1 FOREIGN KEY (notificacao_id) REFERENCES notificacao(id);
 ALTER TABLE notificacao_pessoa ADD CONSTRAINT notificacao_pessoa_fk2 FOREIGN KEY (pessoa_id) REFERENCES pessoa(id);

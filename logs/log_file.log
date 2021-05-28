@@ -1,0 +1,54 @@
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 198-525-482
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/May/2021 16:18:04] "[37mOPTIONS /dbproj/leilao/23 HTTP/1.1[0m" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+DEBUG:logger:payload: {'titulo': 'teste3', 'descricao': 'auction', 'data_inicio': '2021-05-28 14:39:00', 'data_fim': '2021-05-29 00:00:00', 'precoMinimo': 10, 'artigoId': 31}
+DEBUG:logger:id: 23
+INFO:werkzeug:127.0.0.1 - - [28/May/2021 16:19:38] "[37mPOST /dbproj/leilao/23 HTTP/1.1[0m" 200 -
+INFO:logger:###              DEMO: POST /leilao              ###
+DEBUG:logger:payload: {'titulo': 'teste3', 'descricao': 'auction', 'data_inicio': '2021-05-29 14:39:00', 'data_fim': '2021-05-30 00:00:00', 'precoMinimo': 10, 'artigoId': 31}
+DEBUG:logger:id: 23
+INFO:werkzeug:127.0.0.1 - - [28/May/2021 16:19:53] "[37mPOST /dbproj/leilao/23 HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 198-525-482
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 198-525-482
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: POST /leilao              ###
+DEBUG:logger:payload: {'titulo': 'teste3', 'descricao': 'auction', 'data_inicio': '2021-05-29 14:39:00', 'data_fim': '2021-05-30 00:00:00', 'precoMinimo': 10, 'artigoId': 31}
+DEBUG:logger:id: 23
+INFO:werkzeug:127.0.0.1 - - [28/May/2021 16:21:13] "[37mPOST /dbproj/leilao/23 HTTP/1.1[0m" 200 -
+INFO:logger:###              DEMO: GET /leilao              ###
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\anaconda3\\Lib\\site-packages\\flask\\_compat.py', reloading
+INFO:werkzeug:127.0.0.1 - - [28/May/2021 16:22:21] "[35m[1mGET /dbproj/leiloes/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 198-525-482
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:###              DEMO: GET dbproj/Leilao/<id>              ###
+DEBUG:logger:id: 10
+INFO:werkzeug:127.0.0.1 - - [28/May/2021 16:22:41] "[35m[1mGET /dbproj/leilao/10 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\anaconda3\\Lib\\site-packages\\flask\\helpers.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 198-525-482
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\anaconda3\\Lib\\site-packages\\flask\\wrappers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\anaconda3\\Lib\\site-packages\\werkzeug\\wrappers\\json.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 198-525-482
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
