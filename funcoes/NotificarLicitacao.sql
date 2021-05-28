@@ -7,6 +7,7 @@ declare
 	f1 record;
 	msg text;
 	dt TIMESTAMP;
+	idNotificacao bigint;
 	c1 cursor(idLeilao bigint) for
         select *
 		from licitacao
@@ -27,8 +28,8 @@ begin
 	close c2;
 	msg:='O licitador ' || f1.nome || ' fez uma licitacao superior a sua no leilao ' || new.leilao_id || ': ' || new.preco;
 	dt:= CURRENT_TIMESTAMP;
-	insert into notificacao(mensagem,data) values (msg,dt);
-	insert into notificacao_pessoa(lida,notificacao_data,pessoa_id) values(FALSE,dt,f.pessoa_id);
+	insert into notificacao(mensagem,data) values (msg,dt) returning id into idNotificacao;
+	insert into notificacao_pessoa(lida,pessoa_id,notificacao_id) values(FALSE,f.pessoa_id,idNotificacao);
 	return new;
 end;
 $BODY$;

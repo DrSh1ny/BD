@@ -420,18 +420,22 @@ def create_licitation(id, value):
 #######  Obtain Notifications #########
 #######################################
 
-@app.route("/dbproj/notifications/<id>", methods=['GET'])
+@app.route("/dbproj/notifications/", methods=['GET'])
 def edit_auction(id):
+    idUser=checkLogin()
+    if(idUser==-1):
+        content={'erro':401}
+        return jsonify(content)
     logger.info("###              DEMO: GET  Notifications          ###")
     
-    logger.debug(f'id: {id}')
+    logger.debug(f'id: {idUser}')
 
     conn = db_connection()
     cur = conn.cursor()
     try:
         cur.execute("""
                         select listNotifications('{0}'); 
-                        """.format(id))
+                        """.format(idUser))
         response = cur.fetchall()
         conn.commit()
         notifications = []

@@ -2,8 +2,7 @@ create or replace function listNotifications (p_id notificacao_pessoa.pessoa_id%
 	returns table (
 		nome pessoa.nome%type,
 		mensagem notificacao.mensagem%type,
-        lida notificacao_pessoa.lida%type,
-    
+        lida notificacao_pessoa.lida%type
 	) 
 	language plpgsql
 as $$
@@ -16,7 +15,7 @@ begin
 		from
 			pessoa, notificacao_pessoa, notificacao
 		where
-            pessoa.id = p_id, notificacao_pessoa.pessoa_id = p_id, notificacao_pessoa.notificacao_id = notificacao.id;
+            pessoa.id = p_id and notificacao_pessoa.pessoa_id = p_id and notificacao_pessoa.notificacao_id = notificacao.id;
     
 end;
 $$

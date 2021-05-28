@@ -51,15 +51,14 @@ begin
     --check if leilao exists and store it in historico
     open c1;
     fetch c1 into v_titulo, v_descricao, v_data_inicio, v_data_fim, v_preco_inicial, v_artigo_codigo;
+	close c1;
     if(not found) then
         return -3;
     end if;
 
     insert into historico(data_alteracao, titulo, descricao, data_inicio, data_fim, preco_inicial, artigo_codigo, leilao_id)
-    values( current_timestamp, v_titulo, v_descricao, v_data_inicio, v_data_fim, v_preco_inicial, v_artigo_codigo, id)
+    values( current_timestamp, v_titulo, v_descricao, v_data_inicio, v_data_fim, v_preco_inicial, v_artigo_codigo, id);
 
-    close c1;
-    
     update leilao
     set titulo = p_titulo, descricao = p_descricao, data_inicio = p_data_inicio, data_fim = p_data_fim, preco_inicial = p_preco_inicial, artigo_codigo = p_artigo_codigo
     where id = p_id;
