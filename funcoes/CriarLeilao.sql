@@ -37,7 +37,7 @@ begin
     insert into leilao(titulo,descricao,data_inicio,data_fim,preco_inicial,pessoa_id,artigo_codigo) 
 	values(p_titulo,p_descricao,p_data_inicio,p_data_fim,p_preco_inicial,idUser,p_artigo_codigo)
 	returning id into idNovo;
-	return idNovo;
 	
+	return idNovo;
 end;
 $BODY$;

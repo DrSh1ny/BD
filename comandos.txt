@@ -9,3 +9,15 @@ Criar PGAdmin Container
 
 IP DB Container
     docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgres
+
+
+
+Endpoints:
+
+POST http://localhost:8080/dbproj/user
+{“username”: username, “email”: email, “password”:password}
+{“userId”: novoUserId} / {“erro”: codigoErro}
+
+PUT http://localhost:8080/dbproj/user
+{“username”: username, “password”:password}
+{“authToken”: authToken} / {“erro”: AuthError}

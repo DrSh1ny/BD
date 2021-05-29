@@ -58,7 +58,7 @@ def add_user():
         logger.debug("response: {0}".format(response))
         conn.commit()
         id=response[0][0]
-        if(id in [-3,-2,-1]):
+        if(id in [-4,-3,-2,-1]):
             content={'erro':412}
         else:
             content = {'userId': id}
@@ -94,7 +94,7 @@ def login_user():
         logger.debug("response: {0}".format(response))
         conn.commit()
         token=response[0][0]
-        if(token in [-1,-2,-3]):
+        if(token in [-4,-3,-2,-1]):
             content={'erro':412}
         else:
             content = {'authToken': token}
@@ -293,7 +293,7 @@ def get_leilao_info(id):
 ######### List Auctions of User #######
 #######################################
 
-@app.route("/dbproj/pessoa/<id>", methods=['GET'])
+@app.route("/dbproj/atividade/<id>", methods=['GET'])
 def get_pessoa_activity(id):
     idUser=checkLogin()
     if(idUser==-1):
@@ -355,15 +355,16 @@ def edit_auction(id):
     conn = db_connection()
     cur = conn.cursor()
     try:
-        values = (id, payload["titulo"], payload["descricao"],payload["data_inicio"],payload["data_fim"],payload["precoMinimo"],payload["artigoId"])
+        values = (payload["titulo"], payload["descricao"])
         
         cur.execute("""
-                        select editAuction('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'); 
-                        """.format(values[0],values[1],values[2],values[3],values[4],int(values[5]),int(values[6])))
+                        select editAuction({0}, '{1}','{2}'); 
+                        """.format(id,values[0],values[1]))
         response = cur.fetchall()
+        logger.debug("response: {0}".format(response))
         conn.commit()
         id=response[0][0]
-        if(id in [-3,-2,-1]):
+        if(id in [-4,-3,-2,-1]):
             content={'erro':id}
         else:
             content = {'leilaoId': id}
@@ -390,7 +391,7 @@ def create_licitation(id, value):
 
     logger.info("###              DEMO: GET dbproj/licitar/<id>/<value>              ###");   
 
-    logger.debug(f'id: {id}, value: {value}')
+    logger.debug(f'idUser:{idUser}, id: {id}, value: {value}')
 
     conn = db_connection()
     cur = conn.cursor()
@@ -400,9 +401,10 @@ def create_licitation(id, value):
                         select createLicitation('{0}','{1}','{2}');
                         """.format(idUser,id, value))
         response = cur.fetchall()
+        logger.debug("response: {0}".format(response))
         conn.commit()
         token=response[0][0]
-        if(token in [-1,-2,-3]):
+        if(token in [-4,-3,-2,-1]):
             content={'erro':412}
         else:
             content = {'status': 400}
@@ -420,8 +422,8 @@ def create_licitation(id, value):
 #######  Obtain Notifications #########
 #######################################
 
-@app.route("/dbproj/notifications/", methods=['GET'])
-def edit_auction(id):
+@app.route("/dbproj/notificacoes/", methods=['GET'])
+def get_notifications():
     idUser=checkLogin()
     if(idUser==-1):
         content={'erro':401}
@@ -434,7 +436,7 @@ def edit_auction(id):
     cur = conn.cursor()
     try:
         cur.execute("""
-                        select listNotifications('{0}'); 
+                        select * from listNotifications('{0}'); 
                         """.format(idUser))
         response = cur.fetchall()
         conn.commit()
@@ -480,10 +482,10 @@ def post_in_message_board():
         logger.debug("response: {0}".format(response))
         conn.commit()
         id=response[0][0]
-        if(id in [-3,-2,-1]):
+        if(id in [-4,-3,-2,-1]):
             content={'erro':412}
         else:
-            content = {'status': 'sucesso'}
+            content = {'status': 400}
 
     except (Exception) as error:
         print(error)
