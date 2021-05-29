@@ -379,3 +379,492 @@ DEBUG:logger:	response: [(20, 'mario', datetime.datetime(2021, 5, 29, 15, 58, 17
 DEBUG:logger:	response: [('1', '1', 'joao', datetime.datetime(2021, 5, 29, 15, 59, 18, 472745))]
 DEBUG:logger:	response: [('leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 15, 55, 51, 848975)), ('leilao editado', 'descricao editada', datetime.datetime(2021, 5, 29, 15, 56, 23, 332673))]
 INFO:werkzeug:127.0.0.1 - - [29/May/2021 17:10:16] "GET /dbproj/leilao/9 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:48:49] "[37mGET /dbproj/leilao/9 HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\flask\\json\\__init__.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:49:05] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:51:17] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:51:35] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+DEBUG:logger:	response: [('-1',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:53:29] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'email': 'mario@dei.uc.pt', 'password': '123'}
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:53:42] "[37mPOST /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'email': 'mario@dei.uc.pt', 'password': '123'}
+DEBUG:logger:	response: [(1,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:54:00] "[37mPOST /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+DEBUG:logger:	response: [('357ac6b010df44b54145eb904893be7a',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:54:04] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\flask\\_compat.py', reloading
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:54:11] "[35m[1mGET /dbproj/leilao/9 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[GET] dbproj/Leilao/9
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:54:51] "[35m[1mGET /dbproj/leilao/9 HTTP/1.1[0m" 500 -
+INFO:logger:[GET] dbproj/Leilao/9
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:55:04] "[35m[1mGET /dbproj/leilao/9 HTTP/1.1[0m" 500 -
+INFO:logger:[GET] dbproj/Leilao/9
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:55:21] "[35m[1mGET /dbproj/leilao/9 HTTP/1.1[0m" 500 -
+INFO:logger:[GET] dbproj/Leilao/9
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:55:34] "[37mGET /dbproj/leilao/9 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:56:01] "[35m[1mGET /dbproj/leiloes/ HTTP/1.1[0m" 500 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:56:20] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-29 15:50:00', 'data_fim': '2021-05-31 23:00:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(-4,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:57:32] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-29 18:58:00', 'data_fim': '2021-05-29 19:00:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(-4,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:58:03] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-29 18:59:00', 'data_fim': '2021-05-29 19:00:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(1,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:58:07] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:58:13] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:58:22] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:58:24] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/1/30
+DEBUG:logger:	response: [(-4,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:58:31] "[37mGET /dbproj/licitar/1/30 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:58:36] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:58:37] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(1, 'descricao1')]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:59:02] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/1/30
+DEBUG:logger:	response: [(-4,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:59:05] "[37mGET /dbproj/licitar/1/30 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/1/30
+DEBUG:logger:	response: [(-4,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:59:08] "[37mGET /dbproj/licitar/1/30 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/1/30
+DEBUG:logger:	response: [(-4,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 18:59:56] "[37mGET /dbproj/licitar/1/30 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': '123', 'email': '123123@dei.uc.pt', 'password': '123123'}
+DEBUG:logger:	response: [(2,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:00:11] "[37mPOST /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': '123123', 'password': '123123'}
+DEBUG:logger:	response: [('-1',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:00:17] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': '123', 'password': '123123'}
+DEBUG:logger:	response: [('e51d106243d73c7e2dec96aac7a94c07',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:00:19] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/1/30
+DEBUG:logger:	response: [(-2,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:00:23] "[37mGET /dbproj/licitar/1/30 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-29 19:01:00', 'data_fim': '2021-05-29 19:06:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(2,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:00:45] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+DEBUG:logger:	response: [('04c318368150db5d7726f1bd095d83bb',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:00:52] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/2/30
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:01:03] "[37mGET /dbproj/licitar/2/30 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(2, 'descricao1')]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:01:09] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/2
+DEBUG:logger:	response: [('mario', 30, datetime.datetime(2021, 5, 29, 19, 1, 3, 214338))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10)]
+DEBUG:logger:	response: [(30, 'mario', datetime.datetime(2021, 5, 29, 19, 1, 3, 214338))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:01:13] "[37mGET /dbproj/leilao/2 HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': '123', 'password': '123123'}
+DEBUG:logger:	response: [('379ec6301fcbd63f49ba9813a967eb39',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:04:00] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-29 19:05:00', 'data_fim': '2021-05-29 19:10:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(3,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:04:10] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+DEBUG:logger:	response: [('305a10bc296ed3280fc93b497159ba4f',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:04:18] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/3/35
+DEBUG:logger:	response: [(-2,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:04:29] "[37mGET /dbproj/licitar/3/35 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/3/35
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:05:22] "[37mGET /dbproj/licitar/3/35 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(2, 'descricao1'), (3, 'descricao1')]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:05:26] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/3
+DEBUG:logger:	response: [('mario', 35, datetime.datetime(2021, 5, 29, 19, 5, 21, 989544))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10)]
+DEBUG:logger:	response: [(35, 'mario', datetime.datetime(2021, 5, 29, 19, 5, 21, 989544))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:05:34] "[37mGET /dbproj/leilao/3 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/3
+DEBUG:logger:	response: [('mario', 35, datetime.datetime(2021, 5, 29, 19, 5, 21, 989544)), ('mario', 35, datetime.datetime(2021, 5, 29, 19, 5, 21, 989544))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10)]
+DEBUG:logger:	response: [(35, 'mario', datetime.datetime(2021, 5, 29, 19, 5, 21, 989544))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:06:10] "[37mGET /dbproj/leilao/3 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/3
+DEBUG:logger:	response: [('mario', 35, datetime.datetime(2021, 5, 29, 19, 5, 21, 989544)), ('mario', 35, datetime.datetime(2021, 5, 29, 19, 5, 21, 989544))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10)]
+DEBUG:logger:	response: [(35, 'mario', datetime.datetime(2021, 5, 29, 19, 5, 21, 989544))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:06:22] "[37mGET /dbproj/leilao/3 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/3/40
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:06:42] "[37mGET /dbproj/licitar/3/40 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/3
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 6, 42, 650449)), ('mario', 40, datetime.datetime(2021, 5, 29, 19, 6, 42, 650449))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10)]
+DEBUG:logger:	response: [(35, 'mario', datetime.datetime(2021, 5, 29, 19, 5, 21, 989544)), (40, 'mario', datetime.datetime(2021, 5, 29, 19, 6, 42, 650449))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:06:47] "[37mGET /dbproj/leilao/3 HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\encodings\\__pycache__\\cp850.cpython-37.pyc', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'email': '123123@dei.uc.pt', 'password': '123'}
+DEBUG:logger:	response: [(-2,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:15:01] "[37mPOST /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'email': 'joao@dei.uc.pt', 'password': '123'}
+DEBUG:logger:	response: [(3,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:15:08] "[37mPOST /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('e5ea152c1af7988483ec7af846f1edc6',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:15:13] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-29 19:16:00', 'data_fim': '2021-05-29 19:21:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(4,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:15:29] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+DEBUG:logger:	response: [('de20f60eef0747c38c1faf3453f1b504',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:15:34] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/4/40
+DEBUG:logger:	response: [(-2,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:15:39] "[37mGET /dbproj/licitar/4/40 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:15:45] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(4, 'descricao1')]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:16:15] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/4/40
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:16:18] "[37mGET /dbproj/licitar/4/40 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/4
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:16:27] "[35m[1mGET /dbproj/leilao/4 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[GET] dbproj/Leilao/4
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:17:03] "[37mGET /dbproj/leilao/4 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/4
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:17:54] "[37mGET /dbproj/leilao/4 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:17:59] "[31m[1mGET /dbproj/leilao HTTP/1.1[0m" 405 -
+INFO:logger:[GET] dbproj/Leilao/4
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:18:04] "[37mGET /dbproj/leilao/4 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/3
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10)]
+DEBUG:logger:	response: [(35, 'mario', datetime.datetime(2021, 5, 29, 19, 5, 21, 989544)), (40, 'mario', datetime.datetime(2021, 5, 29, 19, 6, 42, 650449))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:18:09] "[37mGET /dbproj/leilao/3 HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[GET] dbproj/Leilao/4
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:18:32] "[35m[1mGET /dbproj/leilao/4 HTTP/1.1[0m" 500 -
+INFO:logger:[GET] dbproj/Leilao/4
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:18:56] "[35m[1mGET /dbproj/leilao/4 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[GET] dbproj/Leilao/3
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:19:50] "[35m[1mGET /dbproj/leilao/3 HTTP/1.1[0m" 500 -
+INFO:logger:[GET] dbproj/Leilao/4
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:19:58] "[35m[1mGET /dbproj/leilao/4 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 192-487-002
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[GET] dbproj/Leilao/4
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:20:51] "[35m[1mGET /dbproj/leilao/4 HTTP/1.1[0m" 500 -
+INFO:logger:[GET] dbproj/Leilao/4
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:21:50] "[35m[1mGET /dbproj/leilao/4 HTTP/1.1[0m" 500 -
+INFO:logger:[GET] dbproj/Leilao/4
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:22:17] "[35m[1mGET /dbproj/leilao/4 HTTP/1.1[0m" 500 -
+INFO:logger:[GET] dbproj/Leilao/4
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:24:45] "[35m[1mGET /dbproj/leilao/4 HTTP/1.1[0m" 500 -
+INFO:logger:[GET] dbproj/Leilao/4
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 16, 18, 874861), datetime.datetime(2021, 5, 29, 19, 21))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 16, 18, 874861))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:25:06] "[37mGET /dbproj/leilao/4 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-29 19:26:00', 'data_fim': '2021-05-29 19:30:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(5,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:25:27] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('ce8cf2e5899cf08042d8567d13e3d90b',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:25:32] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/5/40
+DEBUG:logger:	response: [(-2,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:25:39] "[37mGET /dbproj/licitar/5/40 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/5/40
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:26:23] "[37mGET /dbproj/licitar/5/40 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(5, 'descricao1')]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:26:28] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/5
+DEBUG:logger:	response: [('joao', 40, datetime.datetime(2021, 5, 29, 19, 26, 23, 339481), datetime.datetime(2021, 5, 29, 19, 30))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10)]
+DEBUG:logger:	response: [(40, 'joao', datetime.datetime(2021, 5, 29, 19, 26, 23, 339481))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:26:33] "[37mGET /dbproj/leilao/5 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/5
+DEBUG:logger:	response: [('joao', 40, datetime.datetime(2021, 5, 29, 19, 26, 23, 339481), datetime.datetime(2021, 5, 29, 19, 30))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10)]
+DEBUG:logger:	response: [(40, 'joao', datetime.datetime(2021, 5, 29, 19, 26, 23, 339481))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:27:33] "[37mGET /dbproj/leilao/5 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/5
+DEBUG:logger:	response: [('joao', 40, datetime.datetime(2021, 5, 29, 19, 26, 23, 339481), datetime.datetime(2021, 5, 29, 19, 30))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10)]
+DEBUG:logger:	response: [(40, 'joao', datetime.datetime(2021, 5, 29, 19, 26, 23, 339481))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:27:51] "[37mGET /dbproj/leilao/5 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/5
+DEBUG:logger:	response: [('joao', 40, datetime.datetime(2021, 5, 29, 19, 26, 23, 339481), datetime.datetime(2021, 5, 29, 19, 30))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10)]
+DEBUG:logger:	response: [(40, 'joao', datetime.datetime(2021, 5, 29, 19, 26, 23, 339481))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:29:04] "[37mGET /dbproj/leilao/5 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/5
+DEBUG:logger:	response: [('joao', 40, datetime.datetime(2021, 5, 29, 19, 26, 23, 339481), datetime.datetime(2021, 5, 29, 19, 30))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10)]
+DEBUG:logger:	response: [(40, 'joao', datetime.datetime(2021, 5, 29, 19, 26, 23, 339481))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:31:43] "[37mGET /dbproj/leilao/5 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-29 19:32:00', 'data_fim': '2021-05-29 19:36:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(6,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:31:54] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+DEBUG:logger:	response: [('859196dfc86f51edfaaf7f63ce8c1b6f',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:31:58] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/6/40
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:32:07] "[37mGET /dbproj/licitar/6/40 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(6, 'descricao1')]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:32:11] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/6
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 32, 7, 661469), datetime.datetime(2021, 5, 29, 19, 36))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10), (6, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 32), datetime.datetime(2021, 5, 29, 19, 36), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 32, 7, 661469))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:32:15] "[37mGET /dbproj/leilao/6 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/6
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 32, 7, 661469), datetime.datetime(2021, 5, 29, 19, 36))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10), (6, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 32), datetime.datetime(2021, 5, 29, 19, 36), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 32, 7, 661469))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:32:32] "[37mGET /dbproj/leilao/6 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/6
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 32, 7, 661469), datetime.datetime(2021, 5, 29, 19, 36))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10), (6, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 32), datetime.datetime(2021, 5, 29, 19, 36), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 32, 7, 661469))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:32:45] "[37mGET /dbproj/leilao/6 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/6
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 32, 7, 661469), datetime.datetime(2021, 5, 29, 18, 36))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10), (6, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 32), datetime.datetime(2021, 5, 29, 19, 36), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 32, 7, 661469))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:32:52] "[37mGET /dbproj/leilao/6 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/6
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 32, 7, 661469), datetime.datetime(2021, 5, 29, 18, 36))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10), (6, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 32), datetime.datetime(2021, 5, 29, 19, 36), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 32, 7, 661469))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:33:29] "[37mGET /dbproj/leilao/6 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/6
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 29, 19, 32, 7, 661469), datetime.datetime(2021, 5, 29, 18, 36))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10), (6, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 32), datetime.datetime(2021, 5, 29, 19, 36), 10)]
+DEBUG:logger:	response: [(40, 'mario', datetime.datetime(2021, 5, 29, 19, 32, 7, 661469))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:36:07] "[37mGET /dbproj/leilao/6 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-29 19:37:00 GMT', 'data_fim': '2021-05-29 19:40:00 GMT', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(7,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:36:26] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('157ec4a43865ea9eb9c50d0af9bb9ebd',)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:36:32] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:36:36] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:36:38] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:36:42] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:36:48] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(7, 'descricao1')]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:37:03] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/7/40
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:37:10] "[37mGET /dbproj/licitar/7/40 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:37:16] "[31m[1mGET /dbproj/leilao/ HTTP/1.1[0m" 405 -
+INFO:logger:[GET] dbproj/Leilao/7
+DEBUG:logger:	response: [('joao', 40, datetime.datetime(2021, 5, 29, 19, 37, 10, 821242), datetime.datetime(2021, 5, 29, 18, 40))]
+DEBUG:logger:	response: [(1, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 18, 59), datetime.datetime(2021, 5, 29, 19, 0), 10), (2, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 1), datetime.datetime(2021, 5, 29, 19, 6), 10), (3, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 5), datetime.datetime(2021, 5, 29, 19, 10), 10), (4, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 16), datetime.datetime(2021, 5, 29, 19, 21), 10), (5, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 26), datetime.datetime(2021, 5, 29, 19, 30), 10), (6, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 32), datetime.datetime(2021, 5, 29, 19, 36), 10), (7, 'leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 19, 37), datetime.datetime(2021, 5, 29, 19, 40), 10)]
+DEBUG:logger:	response: [(40, 'joao', datetime.datetime(2021, 5, 29, 19, 37, 10, 821242))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [29/May/2021 19:37:19] "[37mGET /dbproj/leilao/7 HTTP/1.1[0m" 200 -

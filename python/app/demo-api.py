@@ -196,6 +196,17 @@ def get_leilao_info(id):
     conn = db_connection()
     cur = conn.cursor()
 
+    # Vencedor Info
+    cur.execute("select * from getVencedor({0})".format(id))
+    rows = cur.fetchall()
+    logger.debug("\tresponse: {0}".format(rows))
+    vencedor_info = {}
+    if(rows):
+        row = rows[0]
+        vencedor_info = {'vencedor': row[0], 'valor final': row[1], 'tempo': row[2]}
+    else:
+        vencedor_info = {'vencedor': 'Vencedor ainda não determinado'}
+
     # Leilao Info
     cur.execute("select * from getLeilaoInfo({0})".format(id))
     rows = cur.fetchall()
@@ -238,7 +249,7 @@ def get_leilao_info(id):
                 'titulo antigo': row[0], 'descricao antiga': row[1], 'data de alteracao': row[2]}
             historico.append(past)
 
-    total = {'info': leilao_info, 'licitacoes': licitacoes,'mensagens': mensagens, 'historico': historico}
+    total = {'vencedor': vencedor_info,'info': leilao_info, 'licitacoes': licitacoes,'mensagens': mensagens, 'historico': historico}
 
     conn.close()
     return jsonify(total)
