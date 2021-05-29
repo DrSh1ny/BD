@@ -1,11 +1,11 @@
-drop table pessoa cascade;
-drop table artigo cascade;
-drop table historico cascade;
-drop table leilao cascade;
-drop table licitacao cascade;
-drop table mensagem cascade;
-drop table notificacao cascade;
-drop table notificacao_pessoa cascade;
+drop table if exists pessoa cascade;
+drop table if exists artigo cascade;
+drop table if exists historico cascade;
+drop table if exists leilao cascade;
+drop table if exists licitacao cascade;
+drop table if exists mensagem cascade;
+drop table if exists notificacao cascade;
+drop table if exists notificacao_pessoa cascade;
 
 CREATE TABLE pessoa (
 	id	 serial,

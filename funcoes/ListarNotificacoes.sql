@@ -1,8 +1,6 @@
-create or replace function listNotifications (p_id notificacao_pessoa.pessoa_id%type)
+create or replace function listNotifications (p_id bigint)
 	returns table (
-		nome pessoa.nome%type,
-		mensagem notificacao.mensagem%type,
-        lida notificacao_pessoa.lida%type
+		mensagem notificacao.mensagem%type
 	) 
 	language plpgsql
 as $$
@@ -11,11 +9,11 @@ declare
 begin
 	return query 
 		select
-            pessoa.nome, notificacao.mensagem, notificacao_pessoa.lida
+            notificacao.mensagem
 		from
-			pessoa, notificacao_pessoa, notificacao
+			notificacao_pessoa, notificacao
 		where
-            pessoa.id = p_id and notificacao_pessoa.pessoa_id = p_id and notificacao_pessoa.notificacao_id = notificacao.id;
+            notificacao_pessoa.pessoa_id = p_id and notificacao_pessoa.notificacao_id = notificacao.id and notificacao_pessoa.lida=false;
     
 end;
 $$

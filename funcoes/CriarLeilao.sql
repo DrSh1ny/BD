@@ -31,7 +31,7 @@ begin
     close c2;
 	
     --check if end date after begin date
-    if(p_data_fim<=p_data_inicio or p_data_inicio<=current_timestamp) then
+    if(p_data_fim<=p_data_inicio or p_data_inicio<current_timestamp) then
         return -4;
     end if;
     insert into leilao(titulo,descricao,data_inicio,data_fim,preco_inicial,pessoa_id,artigo_codigo) 
