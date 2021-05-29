@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "53e1bda5-0d23-4085-b6d6-dbe3c5a8857e",
+		"name": "projeto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mario\", \r\n    \"email\": \"mario@dei.uc.pt\", \r\n    \"password\": \"123\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mario\",\r\n    \"password\": \"123\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtain User Activity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/atividade/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"atividade",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auction",
+			"item": [
+				{
+					"name": "Obtain Auctions in Progress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leiloes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leiloes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtain Auctions in Progress by Keyword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leiloes/descricao1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leiloes",
+								"descricao1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Auction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"leilao1\", \r\n    \"descricao\": \"descricao1\", \r\n    \"data_inicio\": \"2021-05-29 15:50:00\",\r\n    \"data_fim\": \"2021-05-31 23:00:00\",\r\n    \"precoMinimo\": 10,\r\n    \"artigoId\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Auction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"leilao editado1\", \r\n    \"descricao\": \"descricao editada1\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtain Auction Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Licitation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/licitar/9/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"licitar",
+								"9",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mural",
+			"item": [
+				{
+					"name": "Create New Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"leilaoId\": 9, \r\n    \"titulo\": \"1\",\r\n    \"descricao\": \"1\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/mural/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"mural",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "Obtain Notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/notificacoes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"notificacoes",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
