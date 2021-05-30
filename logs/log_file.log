@@ -379,3 +379,412 @@ DEBUG:logger:	response: [(20, 'mario', datetime.datetime(2021, 5, 29, 15, 58, 17
 DEBUG:logger:	response: [('1', '1', 'joao', datetime.datetime(2021, 5, 29, 15, 59, 18, 472745))]
 DEBUG:logger:	response: [('leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 15, 55, 51, 848975)), ('leilao editado', 'descricao editada', datetime.datetime(2021, 5, 29, 15, 56, 23, 332673))]
 INFO:werkzeug:127.0.0.1 - - [29/May/2021 17:10:16] "GET /dbproj/leilao/9 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+DEBUG:logger:	response: [('c39ef7db71f2dbfa2bfb0eaf5a0b1930',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:53:23] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/atividade/
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:53:31] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: []
+DEBUG:logger:	response: [(9, 'leilao editado1', 'descricao editada1')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:57:02] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(9, 'descricao editada1')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:57:11] "GET /dbproj/leiloes/ HTTP/1.1" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao editado3', 'descricao': 'descricao editada3'}
+DEBUG:logger:	response: [(9,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:57:25] "POST /dbproj/leilao/9 HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/Leilao/9
+DEBUG:logger:	response: [(9, 'leilao editado3', 'descricao editada3', datetime.datetime(2021, 5, 29, 15, 50), datetime.datetime(2021, 5, 31, 23, 0), 10)]
+DEBUG:logger:	response: [(20, 'mario', datetime.datetime(2021, 5, 29, 15, 58, 17, 626304)), (30, 'dario', datetime.datetime(2021, 5, 29, 16, 0, 11, 960009))]
+DEBUG:logger:	response: [('1', '1', 'joao', datetime.datetime(2021, 5, 29, 15, 59, 18, 472745))]
+DEBUG:logger:	response: [('leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 15, 55, 51, 848975)), ('leilao editado', 'descricao editada', datetime.datetime(2021, 5, 29, 15, 56, 23, 332673)), ('leilao editado1', 'descricao editada1', datetime.datetime(2021, 5, 30, 9, 57, 24, 709113))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:57:30] "GET /dbproj/leilao/9 HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/licitar/9/40
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:07] "GET /dbproj/licitar/9/40 HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:11] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/Leilao/9
+DEBUG:logger:	response: [(9, 'leilao editado3', 'descricao editada3', datetime.datetime(2021, 5, 29, 15, 50), datetime.datetime(2021, 5, 31, 23, 0), 10)]
+DEBUG:logger:	response: [(20, 'mario', datetime.datetime(2021, 5, 29, 15, 58, 17, 626304)), (30, 'dario', datetime.datetime(2021, 5, 29, 16, 0, 11, 960009)), (40, 'mario', datetime.datetime(2021, 5, 30, 9, 58, 6, 601287))]
+DEBUG:logger:	response: [('1', '1', 'joao', datetime.datetime(2021, 5, 29, 15, 59, 18, 472745))]
+DEBUG:logger:	response: [('leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 15, 55, 51, 848975)), ('leilao editado', 'descricao editada', datetime.datetime(2021, 5, 29, 15, 56, 23, 332673)), ('leilao editado1', 'descricao editada1', datetime.datetime(2021, 5, 30, 9, 57, 24, 709113))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:15] "GET /dbproj/leilao/9 HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'dario', 'password': '123'}
+DEBUG:logger:	response: [('14e05aa8f0364c602ffd943f2a9c8311',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:26] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('Nova licitacao no leilao 9: 40€',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:29] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('0feb481ffe6f0bdec8a11e82f42cb5f4',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:34] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('Nova licitacao no leilao 9: 40€',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:37] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:40] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: [(9, 'leilao editado3', 'descricao editada3')]
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:45] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'dario', 'password': '123'}
+DEBUG:logger:	response: [('16b2bca09e727440f08f69d9bcccb047',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:54] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: []
+DEBUG:logger:	response: [(9, 'leilao editado3', 'descricao editada3')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:58:57] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/Leilao/9
+DEBUG:logger:	response: [(9, 'leilao editado3', 'descricao editada3', datetime.datetime(2021, 5, 29, 15, 50), datetime.datetime(2021, 5, 31, 23, 0), 10)]
+DEBUG:logger:	response: [(20, 'mario', datetime.datetime(2021, 5, 29, 15, 58, 17, 626304)), (30, 'dario', datetime.datetime(2021, 5, 29, 16, 0, 11, 960009)), (40, 'mario', datetime.datetime(2021, 5, 30, 9, 58, 6, 601287))]
+DEBUG:logger:	response: [('1', '1', 'joao', datetime.datetime(2021, 5, 29, 15, 59, 18, 472745))]
+DEBUG:logger:	response: [('leilao1', 'descricao1', datetime.datetime(2021, 5, 29, 15, 55, 51, 848975)), ('leilao editado', 'descricao editada', datetime.datetime(2021, 5, 29, 15, 56, 23, 332673)), ('leilao editado1', 'descricao editada1', datetime.datetime(2021, 5, 30, 9, 57, 24, 709113))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:59:08] "GET /dbproj/leilao/9 HTTP/1.1" 200 -
+INFO:logger:[POST] /mural/
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:59:16] "[31m[1mPOST /dbproj/mural/ HTTP/1.1[0m" 400 -
+INFO:logger:[POST] /mural/
+DEBUG:logger:	payload: {'leilaoId': 9, 'titulo': '13', 'descricao': '13'}
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:59:21] "POST /dbproj/mural/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O licitador dario escreveu no moral do leilao 9: 13',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:59:24] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('3802e9f39c0888fd3f6450e134e35293',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:59:31] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O licitador dario escreveu no moral do leilao 9: 13',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:59:33] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 10:59:36] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('5c047cd084a2b2963788078b37987e4e',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:21:50] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-30 10:22:30', 'data_fim': '2021-05-30 10:23:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(10,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:22:11] "POST /dbproj/leilao/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+DEBUG:logger:	response: [('24d470062e0b20f27087b991846e3ba4',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:22:20] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/licitar/10/40
+DEBUG:logger:	response: [(-2,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:22:29] "GET /dbproj/licitar/10/40 HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/licitar/10/40
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:22:36] "GET /dbproj/licitar/10/40 HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('39dfc3ca398034d999ac0e9fbef3c0b7',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:22:43] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('Nova licitacao no leilao 10: 40€',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:22:44] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilao1', 'descricao': 'descricao1', 'data_inicio': '2021-05-30 10:29:50', 'data_fim': '2021-05-30 10:30:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(11,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:29:39] "POST /dbproj/leilao/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /leilao/{id}
+DEBUG:logger:	response: [('(null,-1,"2021-05-30 10:37:36.084002")',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:37:36] "PUT /dbproj/leilao/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /leilao/{id}
+DEBUG:logger:	response: [('null', -1, datetime.datetime(2021, 5, 30, 10, 39, 3, 15367))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:39:03] "PUT /dbproj/leilao/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /leilao/{id}
+DEBUG:logger:	response: [('null', -1, datetime.datetime(2021, 5, 30, 10, 42, 39, 167775))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:42:39] "PUT /dbproj/leilao/11 HTTP/1.1" 200 -
+INFO:logger:[PUT] /leilao/{id}
+DEBUG:logger:	response: [('null', -2, datetime.datetime(2021, 5, 30, 10, 42, 45, 705901))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:42:46] "PUT /dbproj/leilao/9 HTTP/1.1" 200 -
+INFO:logger:[PUT] /leilao/{id}
+DEBUG:logger:	response: [('mario', 40, datetime.datetime(2021, 5, 30, 10, 22, 36, 4060))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 11:42:58] "PUT /dbproj/leilao/10 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\runScripts.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\runScripts.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\runScripts.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'email': 'mario@dei.uc.pt', 'password': '123'}
+DEBUG:logger:	response: [(1,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:08:53] "POST /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'email': 'joao@dei.uc.pt', 'password': '123'}
+DEBUG:logger:	response: [(2,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:08:59] "POST /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'hugo', 'email': 'hugo@dei.uc.pt', 'password': '123'}
+DEBUG:logger:	response: [(3,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:09:07] "POST /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('8d34b098695badfd9d19ef668933a981',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:09:13] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:09:17] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilaoJoao', 'descricao': 'descricaoJoao', 'data_inicio': '2021-05-30 11:10:30', 'data_fim': '2021-05-30 11:20:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(1,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:09:58] "POST /dbproj/leilao/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: [(1, 'leilaoJoao', 'descricaoJoao')]
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:10:04] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:10:17] "GET /dbproj/leiloes/ HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/descricao1/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:10:22] "GET /dbproj/leiloes/descricao1 HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(1, 'descricaoJoao')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:10:39] "GET /dbproj/leiloes/ HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/descricao/
+DEBUG:logger:	response: [(1, 'descricaoJoao')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:10:45] "GET /dbproj/leiloes/descricao HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/J/
+DEBUG:logger:	response: [(1, 'descricaoJoao')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:10:51] "GET /dbproj/leiloes/J HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/1/
+DEBUG:logger:	response: [(1, 'descricaoJoao')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:10:54] "GET /dbproj/leiloes/1 HTTP/1.1" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao1 Joao', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:11:11] "POST /dbproj/leilao/1 HTTP/1.1" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao1 Joao', 'descricao': 'descricao editada'}
+DEBUG:logger:	response: [(1,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:12:27] "POST /dbproj/leilao/1 HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/Leilao/1
+DEBUG:logger:	response: [(1, 'leilao1 Joao', 'descricao editada', datetime.datetime(2021, 5, 30, 11, 10, 30), datetime.datetime(2021, 5, 30, 11, 20), 10)]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+DEBUG:logger:	response: [('leilaoJoao', 'descricaoJoao', datetime.datetime(2021, 5, 30, 11, 12, 27, 19788))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:12:45] "GET /dbproj/leilao/1 HTTP/1.1" 200 -
+INFO:logger:[PUT] /leilao/{id}
+DEBUG:logger:	response: [('null', -2, datetime.datetime(2021, 5, 30, 11, 13, 4, 952598))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:13:05] "PUT /dbproj/leilao/1 HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/licitar/1/40
+DEBUG:logger:	response: [(-4,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:13:24] "GET /dbproj/licitar/1/40 HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(1, 'descricao editada')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:13:36] "GET /dbproj/leiloes/ HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/1/
+DEBUG:logger:	response: [(1, 'descricao editada')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:13:41] "GET /dbproj/leiloes/1 HTTP/1.1" 200 -
+INFO:logger:[GET] /leilao/edi/
+DEBUG:logger:	response: [(1, 'descricao editada')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:13:45] "GET /dbproj/leiloes/edi HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: [(1, 'leilao1 Joao', 'descricao editada')]
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:13:51] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:14:00] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[POST] /mural/
+DEBUG:logger:	payload: {'leilaoId': 1, 'titulo': 'Primeira Mensagem', 'descricao': 'Mensagem'}
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:14:16] "POST /dbproj/mural/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O licitador joao escreveu no moral do leilao 1: Primeira Mensagem',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:14:24] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: [(1, 'leilao1 Joao', 'descricao editada')]
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:14:36] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/Leilao/1
+DEBUG:logger:	response: [(1, 'leilao1 Joao', 'descricao editada', datetime.datetime(2021, 5, 30, 11, 10, 30), datetime.datetime(2021, 5, 30, 11, 20), 10)]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: [('Primeira Mensagem', 'Mensagem', 'joao', datetime.datetime(2021, 5, 30, 11, 14, 15, 985780))]
+DEBUG:logger:	response: [('leilaoJoao', 'descricaoJoao', datetime.datetime(2021, 5, 30, 11, 12, 27, 19788))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:14:40] "GET /dbproj/leilao/1 HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'hugo', 'password': '123'}
+DEBUG:logger:	response: [('91aed2640c41e4c079b99243732ab038',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:15:04] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[POST] /mural/
+DEBUG:logger:	payload: {'leilaoId': 1, 'titulo': 'Segunda Mensagem', 'descricao': 'Mensagem'}
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:15:13] "POST /dbproj/mural/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O licitador hugo escreveu no moral do leilao 1: Segunda Mensagem',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:15:16] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('48301dc1c1cbc29844d17a22d923e481',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:15:27] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O licitador hugo escreveu no moral do leilao 1: Segunda Mensagem',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:15:30] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:15:32] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[POST] /mural/
+DEBUG:logger:	payload: {'leilaoId': 1, 'titulo': 'Terceira Mensagem', 'descricao': 'Mensagem'}
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:15:43] "POST /dbproj/mural/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O licitador joao escreveu no moral do leilao 1: Terceira Mensagem',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:15:47] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'hugo', 'password': '123'}
+DEBUG:logger:	response: [('bc5203990cbb6e2cdb19a3045833e9e7',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:15:53] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/Leilao/1
+DEBUG:logger:	response: [(1, 'leilao1 Joao', 'descricao editada', datetime.datetime(2021, 5, 30, 11, 10, 30), datetime.datetime(2021, 5, 30, 11, 20), 10)]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: [('Primeira Mensagem', 'Mensagem', 'joao', datetime.datetime(2021, 5, 30, 11, 14, 15, 985780)), ('Segunda Mensagem', 'Mensagem', 'hugo', datetime.datetime(2021, 5, 30, 11, 15, 13, 123278)), ('Terceira Mensagem', 'Mensagem', 'joao', datetime.datetime(2021, 5, 30, 11, 15, 43, 328078))]
+DEBUG:logger:	response: [('leilaoJoao', 'descricaoJoao', datetime.datetime(2021, 5, 30, 11, 12, 27, 19788))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:16:09] "GET /dbproj/leilao/1 HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/licitar/1/40
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:16:22] "GET /dbproj/licitar/1/40 HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O licitador joao escreveu no moral do leilao 1: Terceira Mensagem',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:16:25] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:16:29] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('28ea1e7639244eca6795641021ad0d75',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:16:34] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('Nova licitacao no leilao 1: 40€',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:16:36] "GET /dbproj/notificacoes/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: [(1, 'leilao1 Joao', 'descricao editada')]
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:16:59] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'hugo', 'password': '123'}
+DEBUG:logger:	response: [('2f7fe96b8015335e22e3e7b4433707a6',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:17:07] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: []
+DEBUG:logger:	response: [(1, 'leilao1 Joao', 'descricao editada')]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:17:11] "GET /dbproj/atividade/ HTTP/1.1" 200 -
+INFO:logger:[GET] dbproj/Leilao/1
+DEBUG:logger:	response: [(1, 'leilao1 Joao', 'descricao editada', datetime.datetime(2021, 5, 30, 11, 10, 30), datetime.datetime(2021, 5, 30, 11, 20), 10)]
+DEBUG:logger:	response: [(40, 'hugo', datetime.datetime(2021, 5, 30, 11, 16, 21, 825902))]
+DEBUG:logger:	response: [('Primeira Mensagem', 'Mensagem', 'joao', datetime.datetime(2021, 5, 30, 11, 14, 15, 985780)), ('Segunda Mensagem', 'Mensagem', 'hugo', datetime.datetime(2021, 5, 30, 11, 15, 13, 123278)), ('Terceira Mensagem', 'Mensagem', 'joao', datetime.datetime(2021, 5, 30, 11, 15, 43, 328078))]
+DEBUG:logger:	response: [('leilaoJoao', 'descricaoJoao', datetime.datetime(2021, 5, 30, 11, 12, 27, 19788))]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:17:23] "GET /dbproj/leilao/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'hugo', 'password': '123'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:29:10] "[35m[1mPUT /dbproj/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'hugo', 'password': '123'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:29:35] "[35m[1mPUT /dbproj/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'hugo', 'password': '123'}
+DEBUG:logger:	response: [('ff231e19e35f46cb4f1dafcfe5203daa',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:30:32] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('32ae5eebf54f0092e4fea2c53b3c5d43',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:30:45] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('29a3d5e96f47c1eb350c74854794a1ea',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:30:51] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('62b13e90905e581505fff50075b28329',)]
+INFO:werkzeug:127.0.0.1 - - [30/May/2021 12:31:36] "PUT /dbproj/user/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\franc\\Desktop\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 627-595-207
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)

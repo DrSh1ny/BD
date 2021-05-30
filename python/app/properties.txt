@@ -1,6 +1,6 @@
 [config]
 DB_IP=localhost
 DB_Port=5432
-DB_User=postgres
-DB_Password=postgres
+DB_User=gAAAAABgs3aOUTkil7I1LSgEb3B8gVwzo5rusmu5_1WjpubcazJJtFhrcSlAg7RaPD-9CHaShXFKmmCQqY_I-OAuzHyxju_Qzw==
+DB_Password=gAAAAABgs3aOUTkil7I1LSgEb3B8gVwzo5rusmu5_1WjpubcazJJtFhrcSlAg7RaPD-9CHaShXFKmmCQqY_I-OAuzHyxju_Qzw==
 DB_Name=postgres

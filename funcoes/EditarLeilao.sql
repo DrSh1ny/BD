@@ -8,7 +8,7 @@ AS $BODY$
 declare
 
     c1 cursor for 
-        select titulo, descricao, data_inicio, data_fim, preco_inicial, artigo_codigo
+        select titulo, descricao, data_inicio, data_fim, preco_inicial, artigo_codigo,pessoa_id
         from leilao
         where p_id = id;
 
@@ -18,6 +18,7 @@ declare
     v_data_fim TIMESTAMP;
     v_preco_inicial bigint;
     v_artigo_codigo bigint;
+    v_pessoa_id bigint;
 
 begin
     --check if parameters are set
@@ -27,14 +28,14 @@ begin
 
     --check if leilao exists and store it in historico
     open c1;
-    fetch c1 into v_titulo, v_descricao, v_data_inicio, v_data_fim, v_preco_inicial, v_artigo_codigo;
+    fetch c1 into v_titulo, v_descricao, v_data_inicio, v_data_fim, v_preco_inicial, v_artigo_codigo,v_pessoa_id;
 	close c1;
     if(not found) then
         return -3;
     end if;
 
-    insert into historico(data_alteracao, titulo, descricao, data_inicio, data_fim, preco_inicial, artigo_codigo, leilao_id)
-    values( current_timestamp, v_titulo, v_descricao, v_data_inicio, v_data_fim, v_preco_inicial, v_artigo_codigo, p_id);
+    insert into historico(data_alteracao, titulo, descricao, data_inicio, data_fim, preco_inicial, artigo_codigo, leilao_id,pessoa_id)
+    values( current_timestamp, v_titulo, v_descricao, v_data_inicio, v_data_fim, v_preco_inicial, v_artigo_codigo, p_id,v_pessoa_id);
 
     update leilao
     set titulo = p_titulo, descricao = p_descricao
