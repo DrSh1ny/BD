@@ -1,8 +1,4 @@
-create type infolicitacao as ( 
-	nome varchar,
-	preco bigint,
-	data timestamp
-);
+
    
 CREATE OR REPLACE FUNCTION endAuction(
 	p_id                  bigint

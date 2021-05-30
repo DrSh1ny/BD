@@ -87,3 +87,10 @@ ALTER TABLE mensagem ADD CONSTRAINT mensagem_fk2 FOREIGN KEY (pessoa_id) REFEREN
 ALTER TABLE historico ADD CONSTRAINT historico_fk1 FOREIGN KEY (leilao_id) REFERENCES leilao(id);
 ALTER TABLE notificacao_pessoa ADD CONSTRAINT notificacao_pessoa_fk1 FOREIGN KEY (notificacao_id) REFERENCES notificacao(id);
 ALTER TABLE notificacao_pessoa ADD CONSTRAINT notificacao_pessoa_fk2 FOREIGN KEY (pessoa_id) REFERENCES pessoa(id);
+
+
+create type infolicitacao as ( 
+	nome varchar,
+	preco bigint,
+	data timestamp
+);
