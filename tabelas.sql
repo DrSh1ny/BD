@@ -55,11 +55,6 @@ CREATE TABLE historico (
 	data_alteracao TIMESTAMP NOT NULL,
 	titulo	 VARCHAR(512) NOT NULL,
 	descricao	 VARCHAR(512),
-	data_inicio	 TIMESTAMP NOT NULL,
-	data_fim	 TIMESTAMP NOT NULL,
-	preco_inicial INTEGER NOT NULL,
-	pessoa_id	 BIGINT NOT NULL,
-	artigo_codigo BIGINT NOT NULL,
 	leilao_id	 BIGINT,
 	PRIMARY KEY(leilao_id, data_alteracao)
 );
