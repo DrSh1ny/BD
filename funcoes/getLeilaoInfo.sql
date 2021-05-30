@@ -15,6 +15,6 @@ begin
 	return query
 		select  cast(leilao.id as bigint), leilao.titulo, leilao.descricao, leilao.data_inicio, leilao.data_fim, leilao.preco_inicial
 		from leilao 
-		where leilao.id = leilao.id;
+		where leilao.id = p_id;
 end;
 $$

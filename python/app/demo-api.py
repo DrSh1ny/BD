@@ -214,6 +214,24 @@ def get_leilao_info(id):
     cur = conn.cursor()
 
     try:
+        cur.execute("begin transaction;")
+        cur.execute("select * from getVencedor({0});".format(id))
+        response = cur.fetchall()
+        cur.execute("commit;")
+
+        logger.debug("\tresponse: {0}".format(response))
+        response=response[0]
+        nome=response[0]
+        preco=response[1]
+        data=response[2]
+        vencedor_info={}
+        if(preco==-2):
+            vencedor_info={'status':'Leilao nao concluido ou inexistente'}
+        elif(preco==-1):
+            vencedor_info={'status':'Leilao terminou sem licitacoes'}
+        else:
+            vencedor_info={'licitador':nome,'preco final':preco,'data de licitacao':data}
+
         # Leilao Info
         cur.execute("begin transaction;")
         cur.execute("set transaction read only;")
@@ -272,7 +290,7 @@ def get_leilao_info(id):
                     'titulo antigo': row[0], 'descricao antiga': row[1], 'data de alteracao': row[2]}
                 historico.append(past)
 
-        content = {'info': leilao_info, 'licitacoes': licitacoes,'mensagens': mensagens, 'historico': historico}
+        content = {'vencedor': vencedor_info,'info': leilao_info, 'licitacoes': licitacoes,'mensagens': mensagens, 'historico': historico}
 
     except (Exception) as error:
         print(error)
