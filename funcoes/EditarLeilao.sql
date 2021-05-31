@@ -34,8 +34,8 @@ begin
         return -3;
     end if;
 
-    insert into historico(data_alteracao, titulo, descricao, data_inicio, data_fim, preco_inicial, artigo_codigo, leilao_id,pessoa_id)
-    values( current_timestamp, v_titulo, v_descricao, v_data_inicio, v_data_fim, v_preco_inicial, v_artigo_codigo, p_id,v_pessoa_id);
+    insert into historico(data_alteracao, titulo, descricao, leilao_id)
+    values( current_timestamp, v_titulo, v_descricao, p_id);
 
     update leilao
     set titulo = p_titulo, descricao = p_descricao

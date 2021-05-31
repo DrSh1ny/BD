@@ -788,3 +788,264 @@ INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 627-595-207
 INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 204-690-622
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\__init__.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\backend.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\aead.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\ciphers.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\cmac.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\decode_asn1.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\dh.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__pycache__\\dh.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\dsa.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\utils.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__pycache__\\utils.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\ec.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\ed25519.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\ed448.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\encode_asn1.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\hashes.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\hmac.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\ocsp.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\x509.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\x509\\__pycache__\\ocsp.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\poly1305.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\rsa.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__pycache__\\padding.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\x25519.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__pycache__\\x25519.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__\\x448.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__pycache__\\x448.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\flask\\_compat.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\fernet.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py', reloading
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:26:55] "[35m[1mPUT /dbproj/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 204-690-622
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'email': 'mario@dei.uc.pt', 'password': '123'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:27:03] "[35m[1mPOST /dbproj/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 204-690-622
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 204-690-622
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'email': 'mario@dei.uc.pt', 'password': '123'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:29:45] "[35m[1mPOST /dbproj/user/ HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\configparser.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 204-690-622
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 204-690-622
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 204-690-622
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'email': 'mario@dei.uc.pt', 'password': '123'}
+DEBUG:logger:	response: [(1,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:30:43] "[37mPOST /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'email': 'joao@dei.uc.pt', 'password': '123'}
+DEBUG:logger:	response: [(2,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:30:55] "[37mPOST /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('8af002c9d74a7bb0d14255fd4bed2c34',)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:30:59] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilaoJoao', 'descricao': 'descricaoJoao', 'data_inicio': '2021-05-31 14:32:00', 'data_fim': '2021-05-31 14:37:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(1,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:31:24] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'mario', 'password': '123'}
+DEBUG:logger:	response: [('9fe2eabbda89813540e6642f40d4517a',)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:31:30] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:31:37] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] /leilao/
+DEBUG:logger:	response: [(1, 'descricaoJoao')]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:32:08] "[37mGET /dbproj/leiloes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/1
+DEBUG:logger:	response: [('null', -2, datetime.datetime(2021, 5, 31, 14, 32, 19, 127171))]
+DEBUG:logger:	response: [(1, 'leilaoJoao', 'descricaoJoao', datetime.datetime(2021, 5, 31, 14, 32), datetime.datetime(2021, 5, 31, 14, 37), 10)]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:32:19] "[37mGET /dbproj/leilao/1 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/licitar/1/50
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:32:27] "[37mGET /dbproj/licitar/1/50 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/1
+DEBUG:logger:	response: [('null', -2, datetime.datetime(2021, 5, 31, 14, 32, 31, 289676))]
+DEBUG:logger:	response: [(1, 'leilaoJoao', 'descricaoJoao', datetime.datetime(2021, 5, 31, 14, 32), datetime.datetime(2021, 5, 31, 14, 37), 10)]
+DEBUG:logger:	response: [(50, 'mario', datetime.datetime(2021, 5, 31, 14, 32, 27, 407437))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:32:31] "[37mGET /dbproj/leilao/1 HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /leilao/{id}
+DEBUG:logger:	response: [('null', -2, datetime.datetime(2021, 5, 31, 14, 35, 3, 630872))]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:35:03] "[37mPUT /dbproj/leilao/1 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/1
+DEBUG:logger:	response: [('null', -2, datetime.datetime(2021, 5, 31, 14, 35, 10, 825015))]
+DEBUG:logger:	response: [(1, 'leilaoJoao', 'descricaoJoao', datetime.datetime(2021, 5, 31, 14, 32), datetime.datetime(2021, 5, 31, 14, 37), 10)]
+DEBUG:logger:	response: [(50, 'mario', datetime.datetime(2021, 5, 31, 14, 32, 27, 407437))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:35:10] "[37mGET /dbproj/leilao/1 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/1
+DEBUG:logger:	response: [('null', -2, datetime.datetime(2021, 5, 31, 14, 36, 44, 298287))]
+DEBUG:logger:	response: [(1, 'leilaoJoao', 'descricaoJoao', datetime.datetime(2021, 5, 31, 14, 32), datetime.datetime(2021, 5, 31, 14, 37), 10)]
+DEBUG:logger:	response: [(50, 'mario', datetime.datetime(2021, 5, 31, 14, 32, 27, 407437))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:36:44] "[37mGET /dbproj/leilao/1 HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/Leilao/1
+DEBUG:logger:	response: [('mario', 50, datetime.datetime(2021, 5, 31, 14, 32, 27, 407437))]
+DEBUG:logger:	response: [(1, 'leilaoJoao', 'descricaoJoao', datetime.datetime(2021, 5, 31, 14, 32), datetime.datetime(2021, 5, 31, 14, 37), 10)]
+DEBUG:logger:	response: [(50, 'mario', datetime.datetime(2021, 5, 31, 14, 32, 27, 407437))]
+DEBUG:logger:	response: []
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:37:01] "[37mGET /dbproj/leilao/1 HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /leilao/{id}
+DEBUG:logger:	response: [('mario', 50, datetime.datetime(2021, 5, 31, 14, 32, 27, 407437))]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:37:06] "[37mPUT /dbproj/leilao/1 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:53:47] "[37mGET /dbproj/notificacoes/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('4983fc3ee547070ca04b05d608107467',)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:53:52] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O leilao 1 terminou com maxima licitacao de 50€',)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 14:53:54] "[37mGET /dbproj/notificacoes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/atividade/
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:09:55] "[37mGET /dbproj/atividade/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('f6528be63ab8509b4bbe7c56d96bbaf6',)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:09:58] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/atividade/
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:10:00] "[37mGET /dbproj/atividade/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /user/
+DEBUG:logger:	payload: {'username': 'joao', 'password': '123'}
+DEBUG:logger:	response: [('215d99cefaab8f24def33f6feb3cf713',)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:20:54] "[37mPUT /dbproj/user/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilaoJoao', 'descricao': 'descricaoJoao', 'data_inicio': '2021-05-30 21:40:30', 'data_fim': '2021-05-30 21:50:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(-4,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:20:59] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilaoJoao', 'descricao': 'descricaoJoao', 'data_inicio': '2021-05-31 15:22:30', 'data_fim': '2021-05-31 15:25:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(2,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:21:23] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/atividade/
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:21:26] "[37mGET /dbproj/atividade/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:21:42] "[33mGET /Hey HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:21:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilaoJoao', 'descricao': 'descricaoJoao', 'data_inicio': '2021-05-31 15:22:30', 'data_fim': '2021-05-31 15:25:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(-4,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:24:14] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET] dbproj/atividade/
+DEBUG:logger:	response: [(1, 'leilaoJoao', 'descricaoJoao'), (2, 'leilaoJoao', 'descricaoJoao')]
+DEBUG:logger:	response: []
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:24:19] "[37mGET /dbproj/atividade/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:27:00] "[37mPOST /dbproj/leilao/1 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:27:04] "[37mPOST /dbproj/leilao/2 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:27:08] "[37mPOST /dbproj/leilao/3 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilaoJoao', 'descricao': 'descricaoJoao', 'data_inicio': '2021-05-31 15:27:30', 'data_fim': '2021-05-31 15:30:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(3,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:27:22] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:27:28] "[37mPOST /dbproj/leilao/3 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:27:32] "[37mPOST /dbproj/leilao/3 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:27:33] "[37mPOST /dbproj/leilao/3 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/
+DEBUG:logger:	payload: {'titulo': 'leilaoJoao', 'descricao': 'descricaoJoao', 'data_inicio': '2021-05-31 15:30:30', 'data_fim': '2021-05-31 15:32:00', 'precoMinimo': 10, 'artigoId': 1}
+DEBUG:logger:	response: [(4,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:27:48] "[37mPOST /dbproj/leilao/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:27:52] "[37mPOST /dbproj/leilao/4 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:28:13] "[37mPOST /dbproj/leilao/4 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:28:34] "[37mPOST /dbproj/leilao/4 HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /leilao/{id}
+DEBUG:logger:	payload: {'titulo': 'leilao Joao editado', 'descricao': 'descricao editada'}
+DEBUG:logger:	response: [(4,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:30:45] "[37mPOST /dbproj/leilao/4 HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\j13ma\\Desktop\\Universidade\\3Ano\\DB\\BD\\python\\app\\demo-api.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 204-690-622
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\encodings\\__pycache__\\idna.cpython-37.pyc', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\j13ma\\Anaconda3\\Lib\\__pycache__\\stringprep.cpython-37.pyc', reloading
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 204-690-622
+INFO:werkzeug: * Running on http://localhost:8080/ (Press CTRL+C to quit)
+INFO:logger:[POST] /mural/
+DEBUG:logger:	payload: {'leilaoId': 1, 'titulo': 'Primeira Mensagem', 'descricao': 'Mensagem'}
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:32:37] "[37mPOST /dbproj/mural/ HTTP/1.1[0m" 200 -
+INFO:logger:[POST] /mural/
+DEBUG:logger:	payload: {'leilaoId': 1, 'titulo': 'Primeira Mensagem', 'descricao': 'Mensagem'}
+DEBUG:logger:	response: [(0,)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:32:58] "[37mPOST /dbproj/mural/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O leilao 1 terminou com maxima licitacao de 50€',)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:38:02] "[37mGET /dbproj/notificacoes/ HTTP/1.1[0m" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O leilao 1 terminou com maxima licitacao de 50€',)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:38:29] "[37mGET /dbproj/notificacoes/ HTTP/1.1[0m" 200 -
+INFO:logger:[PUT] /leilao/{id}
+DEBUG:logger:	response: [('mario', 50, datetime.datetime(2021, 5, 31, 14, 32, 27, 407437))]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:39:44] "[37mPUT /dbproj/leilao/1 HTTP/1.1[0m" 200 -
+INFO:logger:[GET]  /notificacoes/
+DEBUG:logger:	response: [('O leilao 1 terminou com maxima licitacao de 50€',)]
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 15:40:59] "[37mGET /dbproj/notificacoes/ HTTP/1.1[0m" 200 -
