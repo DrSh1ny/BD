@@ -7,7 +7,6 @@ from cryptography.fernet import Fernet
 
 app = Flask(__name__)
 
-
 #######################################
 ########## Create New User ############
 #######################################
@@ -405,7 +404,7 @@ def end_auction(id):
         content = {'erro': 401}
         return jsonify(content)
 
-    logger.info('[PUT] /leilao/{id}')
+    logger.info(f'[PUT] dbproj/leilao/{id}')
     
     conn = db_connection()
     cur = conn.cursor()

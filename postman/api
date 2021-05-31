@@ -40,7 +40,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"mario\",\r\n    \"password\": \"123\"\r\n}"
+							"raw": "{\r\n    \"username\": \"joao\",\r\n    \"password\": \"123\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/dbproj/user/",
@@ -111,7 +111,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/dbproj/leiloes/descricao1",
+							"raw": "http://localhost:8080/dbproj/leiloes/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -120,7 +120,7 @@
 							"path": [
 								"dbproj",
 								"leiloes",
-								"descricao1"
+								"2"
 							]
 						}
 					},
@@ -133,7 +133,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"titulo\": \"leilao1\", \r\n    \"descricao\": \"descricao1\", \r\n    \"data_inicio\": \"2021-05-29 15:50:00\",\r\n    \"data_fim\": \"2021-05-31 23:00:00\",\r\n    \"precoMinimo\": 10,\r\n    \"artigoId\": 1\r\n}"
+							"raw": "{\r\n    \"titulo\": \"leilaoJoao\", \r\n    \"descricao\": \"descricaoJoao\", \r\n    \"data_inicio\": \"2021-05-30 21:40:30\",\r\n    \"data_fim\": \"2021-05-30 21:50:00\",\r\n    \"precoMinimo\": 10,\r\n    \"artigoId\": 1\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/dbproj/leilao/",
@@ -158,10 +158,10 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"titulo\": \"leilao editado1\", \r\n    \"descricao\": \"descricao editada1\"\r\n}"
+							"raw": "{\r\n    \"titulo\": \"leilao Joao editado\", \r\n    \"descricao\": \"descricao editada\"\r\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/dbproj/leilao/9",
+							"raw": "http://localhost:8080/dbproj/leilao/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -170,7 +170,7 @@
 							"path": [
 								"dbproj",
 								"leilao",
-								"9"
+								"1"
 							]
 						}
 					},
@@ -182,7 +182,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/dbproj/leilao/9",
+							"raw": "http://localhost:8080/dbproj/leilao/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -191,7 +191,7 @@
 							"path": [
 								"dbproj",
 								"leilao",
-								"9"
+								"1"
 							]
 						}
 					},
@@ -203,7 +203,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/dbproj/licitar/9/30",
+							"raw": "http://localhost:8080/dbproj/licitar/1/50",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -212,8 +212,29 @@
 							"path": [
 								"dbproj",
 								"licitar",
-								"9",
-								"30"
+								"1",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "End Auction",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao",
+								"1"
 							]
 						}
 					},
@@ -231,7 +252,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"leilaoId\": 9, \r\n    \"titulo\": \"1\",\r\n    \"descricao\": \"1\"\r\n}"
+							"raw": "{\r\n    \"leilaoId\": 1, \r\n    \"titulo\": \"Primeira Mensagem\",\r\n    \"descricao\": \"Mensagem\"\r\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/dbproj/mural/",
